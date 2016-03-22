@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+	
+	
+	<!-- [if lte IE 9]>
+	 <link rel="stylesheet" href="css/ie.css">
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+	 <![endif]-->
+</head>
+<body>
+	<header>
+	    <section class="container logo">
+	        <a href="#"><img src="img/logo.png" alt="logo"></a>
+	        <div class="search"> 
+	           <form action="#">
+	               <input type="text" placeholder="Поиск по сайту">
+	               <input type="image" src="img/search.png" value="search">
+	               <span> <a href="#">ru</a> &nbsp;<a href="#">eng</a> </span>
+	           </form>
+	        </div>
+	    </section>
+	    <section class="nav container-fluid">
+	    <a href="#" class="mobile-menu" id="touch-menu"> Меню </a>
+	    <nav>
+	       <ul class="mainmenu">
+	           <li><a href="#">О компании</a></li>
+	           <li><a href="#">Услуги</a>
+	               <ul>
+	                   <li class="submenu"><a href="#"> Подменю1</a></li>
+	                   <li class="submenu"><a href="#"> Подменю2</a></li>
+	                   <li class="submenu"><a href="#"> Подменю3</a></li>
+	               </ul> 
+	           </li>
+	           <li><a href="#">Продукция</a></li>
+	           <li><a href="#">Новости</a></li>
+	           <li><a href="#">Контакты</a></li>
+	       </ul>
+	    </nav> 
+	    </section>
+	</header>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript" ></script>
+    <script src="js/menu.js" type="text/javascript"></script>
+ <!--[if lte IE 9]>
+     <script src="js/placeholder.min.js"></script>
+    <![endif]-->
+</body>
+</html>
