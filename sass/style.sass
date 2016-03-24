@@ -26,3 +26,118 @@
         border: none
         margin-right: 65px
 // шапка сайта
+
+// меню сайта
+.nav
+    background: $backgroundMenu
+    min-height: 40px
+    @media(max-width: $mobile)
+        margin: 0
+        //position: relative
+
+nav > ul
+    margin: 0
+    padding: 0
+    display: block
+    height: $heightMenu // ширина полоски меню
+    line-height: $heightMenu // выравнивание по центру менюшки
+    text-align: center
+    @media(max-width: $mobile)
+        display: none
+
+    li
+        display: inline-block
+        position: relative
+        z-index: 100
+        padding: 10px 0px
+        @media(max-width: $mobile)
+            display: block
+            margin: 0
+        &:hover
+            background: $backgroundHoverMenu // при наведении по основному меню
+        &:hover > ul
+            display: block
+        &:hover a
+            color: $colorHoverTextMenu //цвет ссылки глав меню
+        a
+            text-decoration: none
+            padding: 3px 18px
+            display: block
+            color: $colorTextMenu
+            font-size: $headers
+            @media(max-width: $mobile)
+                background: $mobileBackground
+                color: $mobileColorText
+            &:hover/* стили которые отвечают за наведдение по главному меню */
+                color: $colorHoverTextMenu
+                background: $backgroundHoverMenu
+                @media(max-width: $mobile)
+                    background: $mobileHoverMenuBackground
+                    color: $mobileHoverMenuText
+            &:hover > a
+                color: $colorHoverTextMenu
+                background: $backgroundHoverMenu
+
+    ul
+        margin: 0px
+        padding: 0px
+        width: $widthSubMenu
+        position: absolute
+        top: $heightMenu + 10px // смещение подменю на высоту меню
+        background: $backgroundSubMenu
+        display: none // скрытие и показ меню второго уровня
+        @media(max-width: $mobile)
+            display: block
+            position: relative
+            top: 0
+            left: 0
+            width: 100%
+        &:before
+            content: ""
+            position: absolute
+            left: 40px
+            top: -20px; /* Положение треугольника */
+            border: 10px solid transparent;
+            border-bottom: 10px solid $triangle;
+        @media(max-width: $mobile)
+            &:before
+                content: none
+        li
+            display: block
+            padding: 10px 5px 10px 0px
+            width: 100%
+            &:hover > a
+                background: $backgroundHoverSubMenu
+                color: $colorHoverTextSubMenu
+            &:hover
+                background: $backgroundHoverSubMenu
+                color: $colorHoverTextSubMenu
+        a
+            display: block
+            width: 90%
+            padding: 5px
+            line-height: 20px
+            text-align: left
+            border-bottom: 1px solid grey
+            &:hover
+                background: $mobileBackground
+
+.hamburger
+    display: none
+    @media(max-width: $mobile)
+        display: block
+        float: right
+
+.mobilemenu
+        display: block
+        position: absolute
+        top: 30.5%
+        width: 100%
+        padding: 0
+        left: 0
+        height: 300px
+        li
+            a
+                padding: 10px
+
+// меню сайта

@@ -1,6 +1,6 @@
 $(document).ready(function(){
  
-    var touch = $('#touch-menu');
+  /*  var touch = $('#touch-menu');
     var menu = $('.mainmenu');
  
     $(touch).on('click', function(e) {
@@ -13,5 +13,24 @@ $(document).ready(function(){
             menu.removeAttr('style');
         }
     });
- 
+
+      // Look for .hamburger
+    var hamburger = document.querySelector(".hamburger");
+    // On click
+    hamburger.addEventListener("click", function() {
+    // Toggle class "is-active"
+    hamburger.classList.toggle("is-active");
+        
+  });
+
+ */
+    var $hamburger = $(".hamburger");
+    var $mainmenu = $(".mainmenu");
+    $hamburger.on("click", function(e) {
+        $hamburger.toggleClass("is-active");
+        $mainmenu.toggleClass("mobilemenu");
+  });    
+    
+    
 });
+
