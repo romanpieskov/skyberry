@@ -1,132 +1,28 @@
-@import 'vars';
-@import 'normalize';
-@import 'responsive_grid';
-@import 'common';
+@import 'vars'
+@import 'normalize'
+@import 'responsive_grid'
+@import 'common'
 
-// шапка сайта 
+// шапка сайта
 .logo
-    padding: 27px 15px;
+    padding: 27px 10px
 
 .search
-    float: right;
-    text-transform: uppercase;
+    float: right
+    text-transform: uppercase
+    position: relative
     span
-        margin-left: 40px;
+        margin-left: 7px
+        a
+            display: inline-block
+            margin: 15px 2px
     input[type=image]
-        position: relative;
-        top: 7px;
-    input[type=text]
-        width: 140px;
-        border: none;
-        
-        
-// меню сайта 
-.nav
-    background: $blue
-    @media(max-width: $mobile)
-        margin: 0
-        background: none
-
-.mainmenu
-    margin: 0
-    display: block;
-    height: 40px // ширина полоски меню 
-    line-height: 40px // выравнивание по центру менюшки 
-    text-align: center
-    @media(max-width: $mobile)
-        display: none
-    li
-        display: inline-block;
-        position: relative;
-        z-index: 100;
-        //padding: 10px 0px
-        @media(max-width: $mobile)
-            display: block
-            margin: 0
-        &:hover
-            background: $white
-        &:hover > ul
-            display: block
-        &:hover a
-            color: $black //цвет ссылки глав меню 
-        a
-            text-decoration: none
-            padding: 0px 20px
-            display: block
-            color: $white
-            @media(max-width: $mobile)
-                background: #fff
-                color: #797979
-            &:hover/* стили которые отвечают за наведдение по главному меню */
-                color: $black
-                background: $white
-            @media(max-width: $mobile)
-                background: #f0f0f0
-                color: #797979
-            &:hover > a
-                color: $black
-                background: $white
-            @media(max-width: $mobile)
-                background: #f0f0f0
-                color: #797979
-    ul
-        margin: 0px
-        padding: 0px
-        width: 150px
+        display: inline-block
         position: absolute
-        top: 40px
-        border: 1px solid $blue
-        border-radius: 4px
-        background: $white
-        display: none // скрытие и показ меню второго уровня 
-        @media(max-width: $mobile)
-            display: block
-            position: relative
-            top: 0
-            left: 0
-            width: 100%
-        &:before
-            content: ""
-            position: absolute
-            left: 20px; 
-            top: -20px; /* Положение треугольника */ 
-            border: 10px solid transparent;
-            border-bottom: 10px solid green;
-        @media(max-width: $mobile)
-            &:before
-                content: none
-        li
-            display: block
-            padding: 0px
-            width: 100%
-            &:hover > a
-                background: $blue
-                color: $white
-                border-bottom: 1px solid grey
-                
-        a
-            display: block
-            color: $black
-            width: 100%
-            &:hover
-                background: #f0f0f0
-
-.mobile-menu
-    display: none
-    width: 100%
-    height: 100%
-    background: url(../img/fa-bars.png) no-repeat 0% 0%;
-    color: $white
-    background: $blue
-    @media(max-width: $mobile)
-        display: block
-        margin-top: 20px
-        //float: right
-        //text-align: center
-        //line-height: 20px
-        //width: 50px
-        //height: 50px
-    &:hover
-        text-decoration: none
-        background: $white
-// меню сайта 
+        top: 12px
+        left: 105px
+    input[type=text]
+        width: 94px
+        border: none
+        margin-right: 65px
+// шапка сайта
