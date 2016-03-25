@@ -1874,6 +1874,7 @@ nav > ul ul a:hover {
 }
 
 .work {
+  max-height: 415px;
   position: relative;
 }
 
@@ -1881,7 +1882,7 @@ nav > ul ul a:hover {
   content: " ";
   position: absolute;
   width: 0%;
-  height: 10px;
+  height: 0px;
   top: 70px;
   z-index: 0;
   border-style: solid;
@@ -1891,15 +1892,16 @@ nav > ul ul a:hover {
 
 .work p {
   position: relative;
-  top: -80px;
+  top: -32px;
   z-index: 1;
   width: 80%;
-  height: 0px;
-  margin-top: 28px;
+  max-height: 40px;
+  margin-top: -12px;
   padding: 0px 15px;
   background-color: transparent;
   color: #fff;
   font-size: 18px;
+  overflow-y: hidden;
 }
 
 .work span, .work button {
@@ -1923,4 +1925,70 @@ nav > ul ul a:hover {
   color: #fff;
   background: #0e364e;
   border: none;
+}
+
+.work .callback div {
+  max-height: 115px;
+}
+
+.news h2 {
+  margin: 0;
+}
+
+.news h3 {
+  font-weight: 600;
+}
+
+.news img {
+  float: left;
+  display: block;
+  padding: 10px;
+}
+
+.news .info {
+  min-height: 100px;
+  max-height: 100px;
+  overflow-y: hidden;
+}
+
+.news a {
+  color: #b2b2b2;
+  text-decoration: underline;
+}
+
+.news a:hover {
+  color: black;
+}
+
+.news hr {
+  margin: 10px 0px 30px 0px;
+}
+
+.news hr:after {
+  content: "";
+  display: block;
+  border-top: 2px solid #b2b2b2;
+}
+
+.clients {
+  position: relative;
+}
+
+.clients h2 {
+  margin-top: 30px;
+}
+
+.clients .logo-partners {
+  margin-top: 25px;
+}
+
+.clients img {
+  display: block;
+  margin: 0 auto;
+}
+
+.clients p {
+  text-align: justify;
+  font-size: 15px;
+  margin-top: 60px;
 }
