@@ -155,7 +155,10 @@ nav > ul
 // галерея работ
 .work
     max-height: 415px
-    position: relative
+    @media(max-width: $nout)
+        max-height: 815px  // нужен чтобы блоки не наползали в мобильной версии
+    @media(max-width: $mobile)
+        max-height: 1265px // нужен чтобы блоки не наползали в мобильной версии
     .item-work
         &:after
             content: " "
@@ -231,7 +234,9 @@ nav > ul
             content: ""
             display: block
             border-top: 2px solid $grey
-
+    .bigitem
+        width: 100%
+        height: auto
 // новости и статьи
 // клиенты и партнеры
 .clients
@@ -248,3 +253,19 @@ nav > ul
         font-size: 15px
         margin-top: 60px
 // клиенты и партнеры
+//
+.logo-partners > img
+    background-size: cover
+    width: 100%
+    height: auto
+
+// клиенты и партнеры
+
+footer
+    -webkit-box-shadow: 0px -10px 10px 0px rgba(178,178,178,1);
+    -moz-box-shadow: 0px -10px 10px 0px rgba(178,178,178,1);
+    box-shadow: 0px -10px 10px 0px rgba(178,178,178,1);
+    height: 180px
+    background: $blue
+    *
+        color: $white

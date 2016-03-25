@@ -1655,6 +1655,10 @@ ul {
   list-style: none;
 }
 
+img {
+  background-size: cover;
+}
+
 .logo {
   padding: 27px 10px;
 }
@@ -1875,7 +1879,18 @@ nav > ul ul a:hover {
 
 .work {
   max-height: 415px;
-  position: relative;
+}
+
+@media (max-width: 992px) {
+  .work {
+    max-height: 815px;
+  }
+}
+
+@media (max-width: 768px) {
+  .work {
+    max-height: 1265px;
+  }
 }
 
 .work .item-work:after {
@@ -1970,6 +1985,11 @@ nav > ul ul a:hover {
   border-top: 2px solid #b2b2b2;
 }
 
+.news .bigitem {
+  width: 100%;
+  height: auto;
+}
+
 .clients {
   position: relative;
 }
@@ -1991,4 +2011,20 @@ nav > ul ul a:hover {
   text-align: justify;
   font-size: 15px;
   margin-top: 60px;
+}
+
+.logo-partners > img {
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  box-shadow: 0px -10px 10px 0px #b2b2b2;
+  height: 180px;
+  background: #0e364e;
+}
+
+footer * {
+  color: #fff;
 }
