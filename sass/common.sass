@@ -4,6 +4,19 @@
 // шрифт
 @import url(https://fonts.googleapis.com/css?family=PT+Sans&subset=cyrillic,latin)
 @import url(https://fonts.googleapis.com/css?family=Open+Sans)
+// миксины
+=lineShw
+    -webkit-box-shadow: 0px 10px 10px 0px rgba(128,128,128,0.75)
+    -moz-box-shadow: 0px 10px 10px 0px rgba(128,128,128,0.75)
+    box-shadow: 0px 10px 10px 0px rgba(128,128,128,0.75)
+
+=clr
+    &:after
+        content: ' '
+        display: table
+        clear: both
+    *zoom: 1
+
 // типографика
 *
     font-family: 'PT Sans', sans-serif
@@ -16,14 +29,20 @@ h2
     text-transform: uppercase
     text-align: center
     font-size: $headers
+    display: block
+    border-bottom: 1px solid $grey
+    padding-bottom: 10px
 h3
     color: $colorH3
     font-size: $base
     line-height: 16px
+p
+    color: $colorT
 // типографика
 // общие стили
 *
     box-sizing: border-box
+
 a
     color:$black;
     &:hover

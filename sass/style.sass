@@ -31,6 +31,7 @@
 .nav
     background: $backgroundMenu
     min-height: 40px
+    +lineShw
     @media(max-width: $mobile)
         margin: 0
         //position: relative
@@ -40,7 +41,7 @@ nav > ul
     padding: 0
     display: block
     height: $heightMenu // ширина полоски меню
-    line-height: $heightMenu // выравнивание по центру менюшки
+    line-height: $heightMenu -5 // выравнивание по центру менюшки
     text-align: center
     @media(max-width: $mobile)
         display: none
@@ -141,3 +142,63 @@ nav > ul
                 padding: 10px
 
 // меню сайта
+// слайдер сайта
+.slider
+    margin-top: 10px
+    img
+        backgroud-size: cover
+        display: block
+        width: 100%
+        padding: 0
+// слайдер сайта
+
+// галерея работ
+.work
+    position: relative
+    .item-work
+        &:after
+            content: " "
+            position: absolute
+            width: 0%
+            height: 10px
+            top: 70px
+            z-index: 0
+            border-style: solid
+            border-width: 150px 0 0 220px
+            border-color: transparent transparent transparent $blue
+    p
+        position: relative
+        top: -80px
+        z-index: 1
+        width: 80%
+        height: 0px
+        margin-top: 28px
+        padding: 0px 15px
+        background-color: transparent
+        color: $white
+        font-size: $headers
+    span
+        display: inline-block
+        width: 100%
+        text-align: center
+        color: $blue
+        font-size: $headers
+        font-weight: bold
+        font-family: Open Sans, sans-serif
+        letter-spacing: 0.5px
+        line-height: 22px
+
+    button
+        @extend span
+        +lineShw
+        padding: 6px 0px
+        margin-top: 15px
+        margin: 15px 0px 50px 0px
+
+        text-transform: uppercase
+        color: $white
+        background: $blue
+        border: none
+
+    //    color: $white
+    // нужна будет адаптация под разные экраны
