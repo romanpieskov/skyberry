@@ -1,0 +1,70 @@
+@import "vars_menu"
+@import "hamburgers"
+.hamburger
+    display: none
+    @media screen and ( max-width: 767px)
+        display: block
+        left: 80%
+.mobilemenu
+    display: block
+    position: relative
+    text-align: center
+    z-index: 1
+    +lineShw
+.box-menu
+    background: $baseColorMenu
+    min-height: $heightMenu
+    .menu
+        +lineShw
+        text-align: $posMenu
+        @media screen and ( max-width: 767px)
+            position: relative
+            display: none
+    ul
+        padding: 0
+        li
+            display: inline-block
+            a
+                font-size: $headers
+                display: block
+                width: $widthMenu
+                line-height: $heightMenu; // выравнивание по центру пунктов
+                color: $colorMenu
+                &:hover
+                    text-decoration: none
+                    background: $colorHoverMenu
+    @media screen and ( max-width: 767px)
+        display: block
+        ul
+            li
+                width: 100%
+                a
+                    width: 100%
+    .submenu
+        position: relative
+        z-index: 1
+        &:hover > ul
+            display: block
+        ul
+            position: absolute
+            top: $heightMenu; // прилипание подменю к основному
+            left: 0px
+            display: none
+            @media screen and ( max-width: 767px)
+                position: relative
+                top: 0
+            li
+                display: block
+                a
+                    width: $widthSubMenu
+                    text-align: left
+                    padding: 10px
+                    line-height: 20px
+                    color: $colorTextSubMenu
+                    background: $colorBcgSubMenu
+                    text-transform: none
+                    &:hover
+                        color: $colorHoverTextSubMenu
+                        background: $colorHoverSubMenu
+                    @media screen and ( max-width: 767px)
+                        width: 100%
