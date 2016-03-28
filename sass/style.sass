@@ -30,12 +30,12 @@
 // шапка сайта
 
 // меню сайта
-
+// импортировано с style_menu.sass
 
 // меню сайта
 // слайдер сайта
 .slider
-    margin-top: 10px
+    margin-top: -6px
     img
         backgroud-size: cover
         display: block
@@ -50,6 +50,8 @@
         max-height: 815px  // нужен чтобы блоки не наползали в мобильной версии
     @media(max-width: $mobile)
         max-height: 1265px // нужен чтобы блоки не наползали в мобильной версии
+    a
+        display: block
     .item-work
         &:after
             content: " "
@@ -86,7 +88,6 @@
 
     button
         @extend span
-        +lineShw
         padding: 6px 0px
         margin-top: 15px
         margin: 15px 0px 50px 0px
@@ -94,6 +95,7 @@
         color: $white
         background: $blue
         border: none
+        border-bottom: 5px solid $grey
     .callback
         div
             max-height: 115px
@@ -142,7 +144,7 @@
     p
         text-align: justify
         font-size: 15px
-        margin-top: 60px
+        margin: 60px 0px 50px 0px
 // клиенты и партнеры
 //
 .logo-partners > img
@@ -153,10 +155,52 @@
 // клиенты и партнеры
 
 footer
-    -webkit-box-shadow: 0px -10px 10px 0px rgba(178,178,178,1);
-    -moz-box-shadow: 0px -10px 10px 0px rgba(178,178,178,1);
-    box-shadow: 0px -10px 10px 0px rgba(178,178,178,1);
+    text-align: center
+    margin-top: 10px
+    border-top: 5px solid $grey
     height: 180px
     background: $blue
     *
         color: $white
+        display: inline-block
+        img
+            padding-top: 20px
+        p
+            @extend img
+            text-align: center
+            width: 20%
+            &:nth-child(2)
+                margin-left: 18%
+                width: 30%
+                text-align: left
+            &:last-child
+                text-align: right
+                float: right
+                width: 15%
+.footer
+    text-align: left
+    & p:first-child
+        width: 30%
+        text-align: left
+    & p:nth-child(2)
+        margin-left: 8%
+    & p:last-child
+        width: 20%
+        padding-top: 4%
+    .social-box1
+        margin: 0 10px
+        width: 35px
+        height: 35px
+        background: url(/img/sprite-item.png) no-repeat 0% 0%
+        &:hover
+            background-color: darken($blue, 10%)
+            border-radius: 6px
+    .social-box2
+        @extend .social-box1
+        background: url(/img/sprite-item.png) no-repeat 33.33333333% 0%
+    .social-box3
+        @extend .social-box1
+        background: url(/img/sprite-item.png) no-repeat 66.33333333% 0%
+    .social-box4
+        @extend .social-box1
+        background: url(/img/sprite-item.png) no-repeat 100% 0%

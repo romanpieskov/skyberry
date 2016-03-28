@@ -183,7 +183,7 @@ sup {
 /**
  * Remove the border on images inside links in IE 10-.
  */
-img {
+img, footer * p {
   border-style: none;
 }
 
@@ -512,7 +512,7 @@ sub {
   bottom: -0.25em;
 }
 
-img {
+img, footer * p {
   border: 0;
 }
 
@@ -663,7 +663,7 @@ figure {
   margin: 0;
 }
 
-img {
+img, footer * p {
   vertical-align: middle;
 }
 
@@ -1550,7 +1550,7 @@ ul {
   list-style: none;
 }
 
-img {
+img, footer * p {
   background-size: cover;
 }
 
@@ -1691,6 +1691,8 @@ img {
 }
 
 .box-menu .menu {
+  margin-top: 2px;
+  position: relative;
   box-shadow: 0px 10px 10px 0px rgba(128, 128, 128, 0.75);
   text-align: center;
 }
@@ -1713,7 +1715,7 @@ img {
 .box-menu ul li a {
   font-size: 18px;
   display: block;
-  width: 100px;
+  width: 105px;
   line-height: 40px;
   color: white;
 }
@@ -1816,10 +1818,10 @@ img {
 }
 
 .slider {
-  margin-top: 10px;
+  margin-top: -6px;
 }
 
-.slider img {
+.slider img, .slider footer * p, footer * .slider p {
   backgroud-size: cover;
   display: block;
   width: 100%;
@@ -1840,6 +1842,10 @@ img {
   .work {
     max-height: 1265px;
   }
+}
+
+.work a {
+  display: block;
 }
 
 .work .item-work:after {
@@ -1881,7 +1887,6 @@ img {
 }
 
 .work button {
-  box-shadow: 0px 10px 10px 0px rgba(128, 128, 128, 0.75);
   padding: 6px 0px;
   margin-top: 15px;
   margin: 15px 0px 50px 0px;
@@ -1889,6 +1894,7 @@ img {
   color: #fff;
   background: #0e364e;
   border: none;
+  border-bottom: 5px solid #b2b2b2;
 }
 
 .work .callback div {
@@ -1903,7 +1909,7 @@ img {
   font-weight: 600;
 }
 
-.news img {
+.news img, .news footer * p, footer * .news p {
   float: left;
   display: block;
   padding: 10px;
@@ -1951,7 +1957,7 @@ img {
   margin-top: 25px;
 }
 
-.clients img {
+.clients img, .clients footer * p, footer * .clients p {
   display: block;
   margin: 0 auto;
 }
@@ -1959,21 +1965,87 @@ img {
 .clients p {
   text-align: justify;
   font-size: 15px;
-  margin-top: 60px;
+  margin: 60px 0px 50px 0px;
 }
 
-.logo-partners > img {
+.logo-partners > img, footer * .logo-partners > p {
   background-size: cover;
   width: 100%;
   height: auto;
 }
 
 footer {
-  box-shadow: 0px -10px 10px 0px #b2b2b2;
+  text-align: center;
+  margin-top: 10px;
+  border-top: 5px solid #b2b2b2;
   height: 180px;
   background: #0e364e;
 }
 
 footer * {
   color: #fff;
+  display: inline-block;
+}
+
+footer * img, footer * p {
+  padding-top: 20px;
+}
+
+footer * p {
+  text-align: center;
+  width: 20%;
+}
+
+footer * p:nth-child(2) {
+  margin-left: 18%;
+  width: 30%;
+  text-align: left;
+}
+
+footer * p:last-child {
+  text-align: right;
+  float: right;
+  width: 15%;
+}
+
+.footer {
+  text-align: left;
+}
+
+.footer p:first-child {
+  width: 30%;
+  text-align: left;
+}
+
+.footer p:nth-child(2) {
+  margin-left: 8%;
+}
+
+.footer p:last-child {
+  width: 20%;
+  padding-top: 4%;
+}
+
+.footer .social-box1, .footer .social-box2, .footer .social-box3, .footer .social-box4 {
+  margin: 0 10px;
+  width: 35px;
+  height: 35px;
+  background: url(/img/sprite-item.png) no-repeat 0% 0%;
+}
+
+.footer .social-box1:hover, .footer .social-box2:hover, .footer .social-box3:hover, .footer .social-box4:hover {
+  background-color: #061823;
+  border-radius: 6px;
+}
+
+.footer .social-box2 {
+  background: url(/img/sprite-item.png) no-repeat 33.33333% 0%;
+}
+
+.footer .social-box3 {
+  background: url(/img/sprite-item.png) no-repeat 66.33333% 0%;
+}
+
+.footer .social-box4 {
+  background: url(/img/sprite-item.png) no-repeat 100% 0%;
 }
