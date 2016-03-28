@@ -52,11 +52,29 @@
         max-height: 1265px // нужен чтобы блоки не наползали в мобильной версии
     a
         display: block
+        position: relative
+        max-height: 220px; // высота отступа кнопок регулируется сдеся
+        &::before
+            content: " " ; // темный квадрат при наведении
+            position: absolute
+            display: block
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background: darken($blue, 8%)
+            opacity: 0
+            transition: opacity 1s
+        &:hover::before
+            opacity: 0.7
+            display: block
+            z-index: 2
+
     .item-work
         &:after
             content: " "
             position: absolute
-            width: 0%
+            width: 100%
             height: 0px
             top: 70px
             z-index: 0
@@ -65,17 +83,31 @@
             border-color: transparent transparent transparent $blue
     p
         position: relative
-        top: -32px
-        z-index: 1
-        width: 80%
-        max-height: 40px
-        margin-top: -12px
+        top: -245px
+        min-height: 220px
         padding: 0px 15px
+        z-index: 1
+        width: 100%
+        height: 100%
+        vertical-align: bottom
         background-color: transparent
         color: $white
         font-size: $headers
-        overflow-y: hidden
+        overflow: hidden
+        .item-text
+            position: relative
+            bottom: -145px
+            display: inline-block
+            width: 90%
+            max-height: 50px
+            color: $white
+            font-size: $headers
+            font-family: 'PT Sans', sans-serif
+            font-weight: normal
+            text-align: left
+            overflow: hidden
     span
+        margin-top: 28px
         display: inline-block
         width: 100%
         text-align: center
@@ -85,7 +117,6 @@
         font-family: Open Sans, sans-serif
         letter-spacing: 0.5px
         line-height: 22px
-
     button
         @extend span
         padding: 6px 0px
