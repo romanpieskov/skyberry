@@ -1,0 +1,41 @@
+#wrapper, #prev, #next {
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+  height: 170px;
+  position: absolute;
+  top: 50%;
+  margin-top: -85px;
+}
+
+#wrapper {
+  width: 90%;
+  left: 5%;
+  overflow: hidden;
+  box-shadow: 0 0 10px #ccc;
+}
+
+#carousel img {
+  margin: 10px 5px;
+  border: none;
+  display: block;
+  float: left;
+}
+
+#prev, #next {
+  background: center center no-repeat #ccc;
+  width: 5%;
+}
+
+#prev:hover, #next:hover {
+  background-color: #bbb;
+}
+
+#prev {
+  background-image: grey;
+  left: 0;
+}
+
+#next {
+  background-image: grey;
+  right: 0;
+}
