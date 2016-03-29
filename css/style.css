@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v4.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -1913,6 +1914,18 @@ img, footer * p {
 }
 
 /* end popup */
+@media screen and (max-width: 991px) {
+  p {
+    color: red;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  p {
+    color: green;
+  }
+}
+
 .logo {
   padding: 27px 10px;
 }
@@ -2014,7 +2027,7 @@ img, footer * p {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .work {
     max-height: 1265px;
   }
@@ -2024,6 +2037,19 @@ img, footer * p {
   display: block;
   position: relative;
   max-height: 220px;
+}
+
+@media (max-width: 992px) {
+  .work a {
+    height: 165px;
+  }
+}
+
+@media (max-width: 767px) {
+  .work a {
+    height: 60%;
+    width: 100%;
+  }
 }
 
 .work a::before {
@@ -2039,10 +2065,43 @@ img, footer * p {
   transition: opacity 1s;
 }
 
+@media (max-width: 992px) {
+  .work a::before {
+    height: 165px;
+  }
+}
+
+@media (max-width: 767px) {
+  .work a::before {
+    width: 100%;
+    height: 60%;
+  }
+}
+
 .work a:hover::before {
   opacity: 0.7;
   display: block;
   z-index: 2;
+}
+
+.work img, .work footer * p, footer * .work p {
+  background-size: сover;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 767px) {
+  .work img, .work footer * p, footer * .work p {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .work .item-work {
+    width: 50%;
+    padding-left: 5%;
+    margin-bottom: 2%;
+  }
 }
 
 .work .item-work:after {
@@ -2055,6 +2114,20 @@ img, footer * p {
   border-style: solid;
   border-width: 150px 0 0 220px;
   border-color: transparent transparent transparent #0e364e;
+}
+
+@media (max-width: 992px) {
+  .work .item-work:after {
+    top: 3.25em;
+    border-width: 8.5em 0 0 11.8em;
+  }
+}
+
+@media (max-width: 767px) {
+  .work .item-work:after {
+    top: 2.5em;
+    border-width: 8.5em 0 0 11em;
+  }
 }
 
 .work p {
@@ -2086,6 +2159,19 @@ img, footer * p {
   overflow: hidden;
 }
 
+@media (max-width: 992px) {
+  .work p .item-text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  .work p .item-text {
+    width: 60%;
+    padding: 0%;
+  }
+}
+
 .work span, .work button {
   margin-top: 28px;
   display: inline-block;
@@ -2097,6 +2183,13 @@ img, footer * p {
   font-family: Open Sans, sans-serif;
   letter-spacing: 0.5px;
   line-height: 22px;
+}
+
+@media (max-width: 767px) {
+  .work span, .work button {
+    margin-top: 0px;
+    font-size: 14px;
+  }
 }
 
 .work button {
@@ -2122,16 +2215,50 @@ img, footer * p {
   font-weight: 600;
 }
 
+@media (max-width: 992px) {
+  .news h3 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .news h3 {
+    margin-top: 15%;
+  }
+}
+
 .news img, .news footer * p, footer * .news p {
   float: left;
   display: block;
   padding: 10px;
 }
 
+@media (max-width: 767px) {
+  .news img, .news footer * p, footer * .news p {
+    background-size: cover;
+    width: 50%;
+    height: auto;
+  }
+}
+
 .news .info {
   min-height: 100px;
   max-height: 100px;
   overflow-y: hidden;
+}
+
+@media (max-width: 992px) {
+  .news .info {
+    font-size: 16px;
+    width: 60%;
+    text-align: justify;
+  }
+}
+
+@media (max-width: 767px) {
+  .news .info {
+    width: 100%;
+  }
 }
 
 .news a {
@@ -2173,6 +2300,21 @@ img, footer * p {
 .clients img, .clients footer * p, footer * .clients p {
   display: block;
   margin: 20px auto;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 992px) {
+  .clients img, .clients footer * p, footer * .clients p {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .clients img, .clients footer * p, footer * .clients p {
+    margin-bottom: 15%;
+  }
 }
 
 .clients p {
@@ -2189,10 +2331,29 @@ img, footer * p {
   position: absolute;
 }
 
+@media (max-width: 992px) {
+  .clients .next-left, .clients .next-right {
+    top: -20px;
+  }
+}
+
 .clients .next-right {
   background: url(../img/next-right.png) no-repeat 0px 0px;
-  left: 95%;
+  left: 93%;
   top: -5%;
+}
+
+@media (max-width: 992px) {
+  .clients .next-right {
+    top: -25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .clients .next-right {
+    left: 86%;
+    top: -1.4em;
+  }
 }
 
 .logo-partners > img, footer * .logo-partners > p {
@@ -2205,8 +2366,14 @@ footer {
   text-align: center;
   margin-top: 10px;
   border-top: 5px solid #b2b2b2;
-  height: 180px;
+  min-height: 250px;
   background: #0e364e;
+}
+
+@media (max-width: 767px) {
+  footer {
+    min-height: 450px;
+  }
 }
 
 footer * {
@@ -2218,21 +2385,45 @@ footer * img, footer * p {
   padding-top: 20px;
 }
 
+@media (max-width: 767px) {
+  footer * img, footer * p {
+    width: 50%;
+  }
+}
+
 footer * p {
   text-align: center;
   width: 20%;
 }
 
-footer * p:nth-child(2) {
-  margin-left: 18%;
-  width: 30%;
-  text-align: left;
+@media (max-width: 992px) {
+  footer * p:nth-child(2) {
+    margin-left: 5%;
+    width: 35%;
+    text-align: left;
+  }
+  footer * p:last-child {
+    width: 20%;
+    padding-top: 20px;
+  }
 }
 
-footer * p:last-child {
-  text-align: right;
-  float: right;
-  width: 15%;
+@media (max-width: 767px) {
+  footer * p:first-child {
+    width: 50%;
+  }
+  footer * p:nth-child(2) {
+    margin-left: 0%;
+    width: 80%;
+    font-size: 18px;
+    text-align: justify;
+  }
+  footer * p:nth-child(3), footer * p:last-child {
+    width: 50%;
+    float: right;
+    font-size: 14px;
+    padding-top: 20px;
+  }
 }
 
 .footer {
@@ -2245,12 +2436,47 @@ footer * p:last-child {
 }
 
 .footer p:nth-child(2) {
-  margin-left: 8%;
+  margin-left: 5%;
+  width: 30%;
 }
 
 .footer p:last-child {
+  float: right;
   width: 20%;
   padding-top: 4%;
+}
+
+@media (max-width: 992px) {
+  .footer p:first-child {
+    margin: 0;
+    width: 30%;
+    text-align: left;
+  }
+  .footer p:nth-child(2) {
+    margin: 0;
+    margin-left: 2%;
+    width: 40%;
+  }
+  .footer p:last-child {
+    margin: 0;
+    width: 26%;
+    padding-top: 4%;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer p:first-child {
+    width: 100%;
+    text-align: center;
+  }
+  .footer p:nth-child(2) {
+    width: 100%;
+    text-align: center;
+  }
+  .footer p:last-child {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .footer .social-box1, .footer .social-box2, .footer .social-box3, .footer .social-box4 {
