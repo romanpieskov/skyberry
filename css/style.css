@@ -1601,7 +1601,7 @@ img, footer * p {
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
   width: 40px;
   height: 4px;
-  background-color: #000;
+  background-color: #0e364e;
   border-radius: 4px;
   position: absolute;
   transition-property: -webkit-transform;
@@ -1690,6 +1690,13 @@ img, footer * p {
   min-height: 40px;
 }
 
+@media screen and (max-width: 767px) {
+  .box-menu {
+    background: #fff;
+    border-bottom: 1px solid grey;
+  }
+}
+
 .box-menu .menu {
   margin-top: 2px;
   margin-bottom: 0px;
@@ -1736,6 +1743,7 @@ img, footer * p {
   }
   .box-menu ul li a {
     width: 100%;
+    color: #000;
   }
 }
 
@@ -1909,10 +1917,44 @@ img, footer * p {
   padding: 27px 10px;
 }
 
+@media screen and (max-width: 767px) {
+  .logo {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .logo a img, .logo a footer * p, footer * .logo a p {
+    position: absolute;
+    margin-left: 5%;
+    top: 5em;
+    float: none;
+    background-size: cover;
+    width: 35%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 519px) {
+  .logo a img, .logo a footer * p, footer * .logo a p {
+    top: 5.5em;
+    width: 40%;
+  }
+}
+
 .search {
   float: right;
   text-transform: uppercase;
   position: relative;
+}
+
+@media screen and (max-width: 767px) {
+  .search {
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
 }
 
 .search span, .search .work button, .work .search button {
@@ -1931,10 +1973,24 @@ img, footer * p {
   left: 105px;
 }
 
+@media screen and (max-width: 767px) {
+  .search input[type=image] {
+    position: relative;
+    left: -3em;
+    top: 0.5em;
+  }
+}
+
 .search input[type=text] {
   width: 94px;
   border: none;
   margin-right: 65px;
+}
+
+@media screen and (max-width: 767px) {
+  .search input[type=text] {
+    width: 40%;
+  }
 }
 
 .slider {

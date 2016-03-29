@@ -6,14 +6,33 @@
 @import 'vars_menu'
 @import 'libs/contact-form/style'
 
-
 // шапка сайта
 .logo
     padding: 27px 10px
+    @media screen and ( max-width: 767px)
+        padding: 10px
+    a
+        img
+            @media screen and ( max-width: 767px)
+                position: absolute
+                margin-left: 5%
+                top: 5em
+                float: none
+                background-size: cover
+                width: 35%
+                height: auto
+            @media screen and ( max-width: 519px)
+                top: 5.5em
+                width: 40%
 .search
     float: right
     text-transform: uppercase
     position: relative
+    @media screen and ( max-width: 767px)
+        float: none
+        width: 100%
+        text-align: center
+        margin: 0 auto
     span
         margin-left: 7px
         a
@@ -24,10 +43,16 @@
         position: absolute
         top: 12px
         left: 105px
+        @media screen and ( max-width: 767px)
+            position: relative
+            left: -3em
+            top: 0.5em
     input[type=text]
         width: 94px
         border: none
         margin-right: 65px
+        @media screen and ( max-width: 767px)
+            width: 40%
 // шапка сайта
 
 // меню сайта
