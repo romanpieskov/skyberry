@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*! normalize.css v4.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -2017,158 +2016,69 @@ img, footer * p {
   padding: 0;
 }
 
-.work {
-  max-height: 415px;
-}
-
-@media (max-width: 992px) {
-  .work {
-    max-height: 815px;
-  }
-}
-
-@media (max-width: 767px) {
-  .work {
-    max-height: 1265px;
-  }
-}
-
-.work a {
-  display: block;
-  position: relative;
-  max-height: 220px;
-}
-
-@media (max-width: 992px) {
-  .work a {
-    height: 165px;
-  }
-}
-
-@media (max-width: 767px) {
-  .work a {
-    height: 60%;
-    width: 100%;
-  }
-}
-
-.work a::before {
-  content: " ";
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #081e2b;
-  opacity: 0;
-  transition: opacity 1s;
-}
-
-@media (max-width: 992px) {
-  .work a::before {
-    height: 165px;
-  }
-}
-
-@media (max-width: 767px) {
-  .work a::before {
-    width: 100%;
-    height: 60%;
-  }
-}
-
-.work a:hover::before {
-  opacity: 0.7;
-  display: block;
-  z-index: 2;
-}
-
 .work img, .work footer * p, footer * .work p {
-  background-size: сover;
+  background-size: cover;
+  display: block;
   width: 100%;
   height: auto;
+  position: relative;
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .work img, .work footer * p, footer * .work p {
-    width: 100%;
+    margin: 3% auto;
   }
 }
 
-@media (max-width: 767px) {
-  .work .item-work {
-    width: 50%;
-    padding-left: 5%;
-    margin-bottom: 2%;
-  }
+.work .item-box {
+  position: relative;
 }
 
-.work .item-work:after {
-  content: " ";
+.work .item-box span, .work .item-box button {
+  box-sizing: content-box;
   position: absolute;
-  width: 100%;
-  height: 0px;
-  top: 70px;
-  z-index: 0;
-  border-style: solid;
-  border-width: 150px 0 0 220px;
-  border-color: transparent transparent transparent #0e364e;
-}
-
-@media (max-width: 992px) {
-  .work .item-work:after {
-    top: 3.25em;
-    border-width: 8.5em 0 0 11.8em;
-  }
-}
-
-@media (max-width: 767px) {
-  .work .item-work:after {
-    top: 2.5em;
-    border-width: 8.5em 0 0 11em;
-  }
-}
-
-.work p {
-  position: relative;
-  top: -245px;
-  min-height: 220px;
-  padding: 0px 15px;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  vertical-align: bottom;
-  background-color: transparent;
-  color: #fff;
-  font-size: 18px;
-  overflow: hidden;
-}
-
-.work p .item-text {
-  position: relative;
-  bottom: -145px;
-  display: inline-block;
-  width: 90%;
-  max-height: 50px;
-  color: #fff;
-  font-size: 18px;
-  font-family: 'PT Sans', sans-serif;
-  font-weight: normal;
+  z-index: 2;
+  top: 0em;
+  left: 0.5em;
+  color: red;
+  margin: 0;
   text-align: left;
-  overflow: hidden;
+  font-size: 18px;
+  background: transparent;
+  width: 88%;
+  height: 24%;
+  padding-top: 77%;
+  padding-left: 5%;
+  color: #fff;
+  font-weight: 400;
 }
 
 @media (max-width: 992px) {
-  .work p .item-text {
+  .work .item-box span, .work .item-box button {
     font-size: 12px;
+    height: 30%;
+    width: 70%;
+    padding-right: 20%;
+    padding-top: 70%;
   }
 }
 
 @media (max-width: 767px) {
-  .work p .item-text {
-    width: 60%;
-    padding: 0%;
+  .work .item-box span, .work .item-box button {
+    font-size: 18px;
+    height: 17%;
+    width: 72%;
+    padding-top: 85%;
+  }
+}
+
+@media (max-width: 436px) {
+  .work .item-box span, .work .item-box button {
+    line-height: 12px;
+    width: 70%;
+    font-size: 10px;
+    padding-top: 85%;
+    padding-left: 5%;
   }
 }
 
@@ -2339,7 +2249,7 @@ img, footer * p {
 
 .clients .next-right {
   background: url(../img/next-right.png) no-repeat 0px 0px;
-  left: 93%;
+  left: 95%;
   top: -5%;
 }
 
@@ -2366,13 +2276,13 @@ footer {
   text-align: center;
   margin-top: 10px;
   border-top: 5px solid #b2b2b2;
-  min-height: 250px;
+  min-height: 200px;
   background: #0e364e;
 }
 
 @media (max-width: 767px) {
   footer {
-    min-height: 450px;
+    min-height: 350px;
   }
 }
 
@@ -2382,18 +2292,34 @@ footer * {
 }
 
 footer * img, footer * p {
+  margin-top: 10px;
   padding-top: 20px;
+  float: left;
 }
 
 @media (max-width: 767px) {
   footer * img, footer * p {
     width: 50%;
+    margin: 0 auto;
+    float: none;
   }
 }
 
 footer * p {
   text-align: center;
   width: 20%;
+}
+
+footer * p:nth-child(2) {
+  margin-left: 18%;
+  width: 30%;
+  text-align: left;
+}
+
+footer * p:last-child {
+  text-align: right;
+  float: right;
+  width: 15%;
 }
 
 @media (max-width: 992px) {
@@ -2416,11 +2342,11 @@ footer * p {
     margin-left: 0%;
     width: 80%;
     font-size: 18px;
-    text-align: justify;
+    text-align: center;
   }
   footer * p:nth-child(3), footer * p:last-child {
     width: 50%;
-    float: right;
+    float: left;
     font-size: 14px;
     padding-top: 20px;
   }

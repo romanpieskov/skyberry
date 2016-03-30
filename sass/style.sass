@@ -76,97 +76,50 @@ p
 
 // галерея работ
 .work
-    max-height: 415px
-    @media(max-width: $nout)
-        max-height: 815px;  // нужен чтобы блоки не наползали в мобильной версии
-    @media(max-width: $mobile)
-        max-height: 1265px; // нужен чтобы блоки не наползали в мобильной версии
-    a
-        display: block
-        position: relative
-        max-height: 220px; // высота отступа кнопок регулируется сдеся
-        @media(max-width: $nout)
-            height: 165px
-        @media(max-width: $mobile)
-            height: 60%
-            width: 100%
-        &::before
-            content: " " ; // темный квадрат при наведении
-            position: absolute
-            display: block
-            top: 0
-            left: 0
-            width: 100%
-            height: 100%
-            background: darken($blue, 8%)
-            opacity: 0
-            transition: opacity 1s
-            @media(max-width: $nout)
-                height: 165px
-            @media(max-width: $mobile)
-                width: 100%
-                height: 60%
-        &:hover::before
-            opacity: 0.7
-            display: block
-            z-index: 2
     img
-        background-size: сover
+        background-size: cover
+        display: block
         width: 100%
         height: auto
-        @media(max-width: $mobile)
-            width: 100%
-    .item-work
-        @media(max-width: $mobile)
-            width: 50%
-            padding-left: 5%
-            margin-bottom: 2%
-        &:after
-            content: " "
-            position: absolute
-            width: 100%
-            height: 0px
-            top: 70px
-            z-index: 0
-            border-style: solid
-            border-width: 150px 0 0 220px
-            border-color: transparent transparent transparent $blue
-            @media(max-width: $nout)
-                top: 3.25em
-                border-width: 8.5em 0 0 11.8em
-            @media(max-width: $mobile)
-                top: 2.5em
-                border-width: 8.5em 0 0 11em
-    p
         position: relative
-        top: -245px
-        min-height: 220px
-        padding: 0px 15px
-        z-index: 1
-        width: 100%
-        height: 100%
-        vertical-align: bottom
-        background-color: transparent
-        color: $white
-        font-size: $headers
-        overflow: hidden
-        .item-text
-            position: relative
-            bottom: -145px
-            display: inline-block
-            width: 90%
-            max-height: 50px
-            color: $white
-            font-size: $headers
-            font-family: 'PT Sans', sans-serif
-            font-weight: normal
+        @media screen and ( max-width: $mobile)
+            margin: 3% auto
+    .item-box
+        position: relative
+        span
+            box-sizing: content-box
+            position: absolute
+            z-index: 2
+            top: 0em
+            left: 0.5em
+            color: red
+            margin: 0
             text-align: left
-            overflow: hidden
+            font-size: $headers
+            background: transparent
+            width: 88%
+            height: 24%
+            padding-top: 77%
+            padding-left: 5%
+            color: $white
+            font-weight: 400
             @media(max-width: $nout)
                 font-size: 12px
+                height: 30%
+                width: 70%
+                padding-right: 20%
+                padding-top: 70%
             @media(max-width: $mobile)
-                width: 60%
-                padding: 0%
+                font-size: $headers
+                height: 17%
+                width: 72%
+                padding-top: 85%
+            @media(max-width: 436px)
+                line-height: 12px
+                width: 70%
+                font-size: 10px
+                padding-top: 85%
+                padding-left: 5%
     span
         margin-top: 28px
         display: inline-block
@@ -274,7 +227,7 @@ p
     .next-right
         @extend .next-left
         background: url(../img/next-right.png) no-repeat 0px 0px
-        left: 93%
+        left: 95%
         top: -5%
         @media(max-width: $nout)
             top: -25px
@@ -294,21 +247,33 @@ footer
     text-align: center
     margin-top: 10px
     border-top: 5px solid $grey
-    min-height: 250px
+    min-height: 200px
     background: $blue
     @media(max-width: $mobile)
-        min-height: 450px
+        min-height: 350px
     *
         color: $white
         display: inline-block
         img
+            margin-top: 10px
             padding-top: 20px
+            float: left
             @media(max-width: $mobile)
                 width: 50%
+                margin: 0 auto
+                float: none
         p
             @extend img
             text-align: center
             width: 20%
+            &:nth-child(2)
+                margin-left: 18%
+                width: 30%
+                text-align: left
+            &:last-child
+                text-align: right
+                float: right
+                width: 15%
             @media(max-width: $nout)
                 &:nth-child(2)
                     margin-left: 5%
@@ -324,10 +289,10 @@ footer
                     margin-left: 0%
                     width: 80%
                     font-size: $headers
-                    text-align: justify
+                    text-align: center
                 &:nth-child(3)
                     width: 50%
-                    float: right
+                    float: left
                     font-size: $base
                     padding-top: 20px
                 &:last-child
