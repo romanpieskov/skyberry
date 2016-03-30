@@ -1666,6 +1666,11 @@ img, footer * p {
   transition: bottom 0.1s ease, transform 0.1s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.1s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
+.nav {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
 .hamburger {
   display: none;
 }
@@ -1711,10 +1716,6 @@ img, footer * p {
     position: relative;
     display: none;
   }
-}
-
-.box-menu ul {
-  padding: 0;
 }
 
 .box-menu ul li {
@@ -1913,18 +1914,6 @@ img, footer * p {
 }
 
 /* end popup */
-@media screen and (max-width: 991px) {
-  p {
-    color: red;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  p {
-    color: green;
-  }
-}
-
 .logo {
   padding: 27px 10px;
 }
@@ -2013,72 +2002,58 @@ img, footer * p {
   backgroud-size: cover;
   display: block;
   width: 100%;
+  height: auto;
   padding: 0;
 }
 
 .work img, .work footer * p, footer * .work p {
-  background-size: cover;
   display: block;
+  background-size: cover;
   width: 100%;
   height: auto;
   position: relative;
+  -webkit-filter: brightness(95%);
+          filter: brightness(95%);
 }
 
-@media screen and (max-width: 767px) {
-  .work img, .work footer * p, footer * .work p {
-    margin: 3% auto;
-  }
+.work img:hover, .work footer * p:hover, footer * .work p:hover {
+  -webkit-filter: brightness(125%);
+          filter: brightness(125%);
 }
 
-.work .item-box {
-  position: relative;
-}
-
-.work .item-box span, .work .item-box button {
-  box-sizing: content-box;
+.work .info-work {
   position: absolute;
-  z-index: 2;
-  top: 0em;
-  left: 0.5em;
-  color: red;
-  margin: 0;
-  text-align: left;
-  font-size: 18px;
-  background: transparent;
-  width: 88%;
-  height: 24%;
-  padding-top: 77%;
-  padding-left: 5%;
+  top: 65%;
+  left: 7%;
   color: #fff;
+  width: 65%;
+  font-size: 18px;
   font-weight: 400;
 }
 
 @media (max-width: 992px) {
-  .work .item-box span, .work .item-box button {
+  .work .info-work {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+@media (max-width: 769px) {
+  .work .info-work {
+    top: 65%;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 420px) {
+  .work .info-work {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 320px) {
+  .work .info-work {
     font-size: 12px;
-    height: 30%;
-    width: 70%;
-    padding-right: 20%;
-    padding-top: 70%;
-  }
-}
-
-@media (max-width: 767px) {
-  .work .item-box span, .work .item-box button {
-    font-size: 18px;
-    height: 17%;
-    width: 72%;
-    padding-top: 85%;
-  }
-}
-
-@media (max-width: 436px) {
-  .work .item-box span, .work .item-box button {
-    line-height: 12px;
-    width: 70%;
-    font-size: 10px;
-    padding-top: 85%;
-    padding-left: 5%;
   }
 }
 

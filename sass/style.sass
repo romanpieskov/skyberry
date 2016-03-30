@@ -6,11 +6,6 @@
 @import 'vars_menu'
 @import 'libs/contact-form/style'
 
-p
-    @media screen and ( max-width: 991px)
-        color: red
-    @media screen and ( max-width: 767px)
-        color: green
 // шапка сайта
 .logo
     padding: 27px 10px
@@ -71,55 +66,39 @@ p
         backgroud-size: cover
         display: block
         width: 100%
+        height: auto
         padding: 0
 // слайдер сайта
 
 // галерея работ
 .work
     img
-        background-size: cover
         display: block
+        background-size: cover
         width: 100%
         height: auto
         position: relative
-        @media screen and ( max-width: $mobile)
-            margin: 3% auto
-    .item-box
-        position: relative
-        span
-            box-sizing: content-box
-            position: absolute
-            z-index: 2
-            top: 0em
-            left: 0.5em
-            color: red
-            margin: 0
-            text-align: left
-            font-size: $headers
-            background: transparent
-            width: 88%
-            height: 24%
-            padding-top: 77%
-            padding-left: 5%
-            color: $white
-            font-weight: 400
-            @media(max-width: $nout)
-                font-size: 12px
-                height: 30%
-                width: 70%
-                padding-right: 20%
-                padding-top: 70%
-            @media(max-width: $mobile)
-                font-size: $headers
-                height: 17%
-                width: 72%
-                padding-top: 85%
-            @media(max-width: 436px)
-                line-height: 12px
-                width: 70%
-                font-size: 10px
-                padding-top: 85%
-                padding-left: 5%
+        filter: brightness(95%)
+        &:hover
+            filter: brightness(125%)
+    .info-work
+        position: absolute
+        top: 65%
+        left: 7%
+        color: $white
+        width: 65%
+        font-size: $headers
+        font-weight: 400
+        @media(max-width: $nout)
+            font-size: $base
+            line-height: $base
+        @media(max-width: 769px)
+            top: 65%
+            font-size: $base
+        @media(max-width: 420px)
+            font-size: $base
+        @media(max-width: 320px)
+            font-size: 12px
     span
         margin-top: 28px
         display: inline-block
