@@ -2032,6 +2032,12 @@ img, footer * p {
   padding: 0;
 }
 
+@media (max-width: 767px) {
+  .item-work {
+    margin: 1.5% 0px;
+  }
+}
+
 .work a {
   display: block;
 }
@@ -2068,22 +2074,26 @@ img, footer * p {
   }
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   .work .info-work {
     top: 65%;
-    font-size: 14px;
+    font-size: 18px;
+    line-height: 14px;
+    width: 50%;
   }
 }
 
 @media (max-width: 420px) {
   .work .info-work {
-    font-size: 14px;
+    top: 60%;
+    width: 55%;
+    font-size: 12px;
   }
 }
 
 @media (max-width: 320px) {
   .work .info-work {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 

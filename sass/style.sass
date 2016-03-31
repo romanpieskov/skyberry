@@ -71,6 +71,9 @@
 // слайдер сайта
 
 // галерея работ
+.item-work
+    @media(max-width: 767px)
+        margin: 1.5% 0px
 .work
     a
         display: block
@@ -94,13 +97,17 @@
         @media(max-width: $nout)
             font-size: $base
             line-height: $base
-        @media(max-width: 769px)
+        @media(max-width: 767px)
             top: 65%
-            font-size: $base
+            font-size: 18px
+            line-height: 14px
+            width: 50%
         @media(max-width: 420px)
-            font-size: $base
-        @media(max-width: 320px)
+            top: 60%
+            width: 55%
             font-size: 12px
+        @media(max-width: 320px)
+            font-size: 10px
     span
         margin-top: 28px
         display: inline-block
