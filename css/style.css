@@ -1777,7 +1777,7 @@ img, footer * p {
 .box-menu .submenu ul {
   position: absolute;
   top: 40px;
-  left: 0px;
+  left: -40px;
   display: none;
 }
 
@@ -1788,12 +1788,21 @@ img, footer * p {
   }
 }
 
+.box-menu .submenu ul > li::after {
+  position: absolute;
+  content: "";
+  left: 40%;
+  top: -13%;
+  border: 8px solid transparent;
+  border-bottom: 8px solid #fff;
+}
+
 .box-menu .submenu ul li {
   display: block;
 }
 
 .box-menu .submenu ul li a {
-  width: 160px;
+  width: 180px;
   text-align: left;
   padding: 10px;
   line-height: 20px;

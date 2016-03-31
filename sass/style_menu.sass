@@ -60,15 +60,23 @@
         ul
             position: absolute
             top: $heightMenu; // прилипание подменю к основному
-            left: 0px
+            left: -40px
             display: none
             @media screen and ( max-width: 767px)
                 position: relative
                 top: 0
+            > li
+                &::after
+                    position: absolute
+                    content: ""
+                    left: 40%
+                    top: -13%
+                    border: 8px solid transparent
+                    border-bottom: 8px solid $white
             li
                 display: block
                 a
-                    width: $widthSubMenu
+                    width: 180px
                     text-align: left
                     padding: 10px
                     line-height: 20px
