@@ -41,7 +41,13 @@ p
 // общие стили
 *
     box-sizing: border-box
-
+html
+    position: relative
+    min-height: 100%
+body
+    margin-bottom: 200px
+    @media(max-width: $mobile)
+        margin-bottom: 350px
 a
     color:$black;
     &:hover
