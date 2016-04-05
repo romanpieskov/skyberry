@@ -1813,13 +1813,13 @@ img, footer * p {
   padding: 15px;
   line-height: 20px;
   color: #000;
-  background: #fff;
+  background: #f6f6f6;
   text-transform: none;
 }
 
 .main-navigation .menu-item ul li a:hover {
-  color: #fff;
-  background: #165479;
+  color: #000;
+  background: #dddddd;
 }
 
 @media screen and (max-width: 767px) {

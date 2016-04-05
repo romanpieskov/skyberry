@@ -11,7 +11,7 @@ $widthSubMenu: 160px; // ширина подменю
 $baseColorMenu: #0e364e;
 $colorMenu: white; // цвет текста
 $colorHoverMenu: lighten($baseColorMenu,10%); // при наведении цвет основного меню
-$colorBcgSubMenu: #fff; // бакграунд подменю
+$colorBcgSubMenu: #f6f6f6; // бакграунд подменю
 $colorTextSubMenu: #000; // цвет текста меню
-$colorHoverSubMenu: lighten($baseColorMenu,10%); // цвет бакграунда при наведении
-$colorHoverTextSubMenu: #fff; // цвет текста при наведении
+$colorHoverSubMenu: darken($colorBcgSubMenu,10%); // цвет бакграунда при наведении
+$colorHoverTextSubMenu: #000; // цвет текста при наведении
