@@ -1698,7 +1698,8 @@ img, footer * p {
 @media screen and (max-width: 639px) {
   .hamburger {
     display: block;
-    left: 80%;
+    left: 78%;
+    margin: 5% 0%;
   }
 }
 
@@ -1960,16 +1961,16 @@ img, footer * p {
   padding: 27px 10px;
 }
 
-@media screen and (max-width: mobile) {
-  .logo {
-    padding: 10px;
-    background: green;
-  }
-}
-
 @media screen and (max-width: 767px) {
   .logo {
     background: red;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .logo {
+    padding: 2% 0px;
+    background: #0e364e;
   }
 }
 
@@ -1983,10 +1984,30 @@ img, footer * p {
   }
 }
 
+@media screen and (max-width: 639px) {
+  .logo a img, .logo a footer * p, footer * .logo a p {
+    background-size: cover;
+    width: 50%;
+    height: auto;
+    position: absolute;
+    top: 1.8%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .logo a img, .logo a footer * p, footer * .logo a p {
+    background-size: cover;
+    width: 50%;
+    height: auto;
+    position: absolute;
+    top: 2%;
+  }
+}
+
 .logo span, .logo .work button, .work .logo button {
   float: left;
   display: inline-block;
-  margin: 0.5% 2%;
+  margin: 0% 2%;
   text-transform: uppercase;
 }
 
@@ -1997,10 +2018,47 @@ img, footer * p {
   }
 }
 
+@media screen and (max-width: 639px) {
+  .logo span, .logo .work button, .work .logo button {
+    float: left;
+    width: 80px;
+    margin-left: 35%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .logo span, .logo .work button, .work .logo button {
+    float: left;
+    margin-left: 38%;
+    padding: 0;
+    width: 60px;
+  }
+}
+
 .logo span a, .logo .work button a, .work .logo button a {
   display: inline-block;
   width: 30%;
   margin: 25% 0;
+}
+
+@media screen and (max-width: 639px) {
+  .logo span a, .logo .work button a, .work .logo button a {
+    display: inline-block;
+    margin: 0;
+    width: 40%;
+    color: #fff;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .logo span a, .logo .work button a, .work .logo button a {
+    display: inline-block;
+    margin: 0;
+    width: 40%;
+    color: #fff;
+    font-size: 14px;
+  }
 }
 
 .search-form {
@@ -2049,6 +2107,32 @@ img, footer * p {
   }
 }
 
+@media screen and (max-width: 639px) {
+  .search-form a {
+    margin: 0;
+    padding: 0;
+    float: left;
+    left: -35%;
+    top: -12px;
+    width: 18px;
+    height: 18px;
+    background: url(../img/mobile/mobile-search2.png) no-repeat 0% 0%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .search-form a {
+    margin: 0;
+    padding: 0;
+    float: left;
+    left: -35%;
+    top: -12px;
+    width: 18px;
+    height: 18px;
+    background: url(../img/mobile/mobile-search2.png) no-repeat 0% 0%;
+  }
+}
+
 .search-form input[type=submit] {
   display: inline-block;
   position: absolute;
@@ -2065,6 +2149,12 @@ img, footer * p {
   border: none;
   margin-right: 3%;
   padding: 5px;
+}
+
+@media screen and (max-width: 639px) {
+  .search-form input[type=search] {
+    display: none;
+  }
 }
 
 .slider {
