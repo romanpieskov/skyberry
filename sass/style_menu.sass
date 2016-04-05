@@ -9,7 +9,7 @@
     padding-left: 0px
 .hamburger
     display: none
-    @media screen and ( max-width: 767px)
+    @media screen and ( max-width: $mobile)
         display: block
         left: 80%
 .mobilemenu
@@ -23,7 +23,7 @@
     min-height: $heightMenu
     width: 100%
     padding: 0
-    @media screen and ( max-width: 767px)
+    @media screen and ( max-width: $mobile)
         background: $white
         border-bottom: 1px solid grey
     .menu
@@ -33,7 +33,7 @@
         border-bottom: 4px solid $grey
         +lineShw
         text-align: $posMenu
-        @media screen and ( max-width: 767px)
+        @media screen and ( max-width: $mobile)
             position: relative
             display: none
     ul
@@ -48,7 +48,7 @@
                 &:hover
                     text-decoration: none
                     background: $colorHoverMenu
-    @media screen and ( max-width: 767px)
+    @media screen and ( max-width: $mobile)
         display: block
         ul
             li
@@ -67,16 +67,20 @@
             left: -40px
             display: none
             height: auto
-            @media screen and ( max-width: 767px)
+            @media screen and ( max-width: $mobile)
                 position: relative
                 top: 0
             &::after
                 position: absolute
                 content: ""
                 left: 35%
-                top: -9%
+                top: -11%
                 border: 8px solid transparent
                 border-bottom: 8px solid $white
+                &:hover
+                    border-bottom: 8px solid #f6f6f6
+                @media screen and ( max-width: $mobile)
+                    display: none
             li
                 display: block
                 a
@@ -90,5 +94,5 @@
                     &:hover
                         color: $colorHoverTextSubMenu
                         background: $colorHoverSubMenu
-                    @media screen and ( max-width: 767px)
+                    @media screen and ( max-width: $mobile)
                         width: 100%

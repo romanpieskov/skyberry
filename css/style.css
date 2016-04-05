@@ -1545,7 +1545,7 @@ body {
   margin-bottom: 200px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 639px) {
   body {
     margin-bottom: 350px;
   }
@@ -1695,7 +1695,7 @@ img, footer * p {
   display: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 639px) {
   .hamburger {
     display: block;
     left: 80%;
@@ -1717,7 +1717,7 @@ img, footer * p {
   padding: 0;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 639px) {
   .main-navigation {
     background: #fff;
     border-bottom: 1px solid grey;
@@ -1733,7 +1733,7 @@ img, footer * p {
   text-align: center;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 639px) {
   .main-navigation .menu {
     position: relative;
     display: none;
@@ -1757,7 +1757,7 @@ img, footer * p {
   background: #165479;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 639px) {
   .main-navigation {
     display: block;
   }
@@ -1787,7 +1787,7 @@ img, footer * p {
   height: auto;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 639px) {
   .main-navigation .menu-item ul {
     position: relative;
     top: 0;
@@ -1798,9 +1798,19 @@ img, footer * p {
   position: absolute;
   content: "";
   left: 35%;
-  top: -9%;
+  top: -11%;
   border: 8px solid transparent;
   border-bottom: 8px solid #fff;
+}
+
+.main-navigation .menu-item ul::after:hover {
+  border-bottom: 8px solid #f6f6f6;
+}
+
+@media screen and (max-width: 639px) {
+  .main-navigation .menu-item ul::after {
+    display: none;
+  }
 }
 
 .main-navigation .menu-item ul li {
@@ -1822,7 +1832,7 @@ img, footer * p {
   background: #dddddd;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 639px) {
   .main-navigation .menu-item ul li a {
     width: 100%;
   }
@@ -1950,9 +1960,16 @@ img, footer * p {
   padding: 27px 10px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: mobile) {
   .logo {
     padding: 10px;
+    background: green;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .logo {
+    background: red;
   }
 }
 
@@ -1962,42 +1979,28 @@ img, footer * p {
 
 @media screen and (max-width: 767px) {
   .logo a img, .logo a footer * p, footer * .logo a p {
-    position: absolute;
     margin-left: 5%;
-    top: 4em;
-    float: none;
-    background-size: cover;
-    width: 35%;
-    height: auto;
-  }
-}
-
-@media screen and (max-width: 519px) {
-  .logo a img, .logo a footer * p, footer * .logo a p {
-    top: 5.5em;
-    width: 40%;
   }
 }
 
 .logo span, .logo .work button, .work .logo button {
-  float: right;
+  float: left;
   display: inline-block;
-  margin-left: 7px;
+  margin: 0.5% 2%;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 992px) {
+  .logo span, .logo .work button, .work .logo button {
+    width: 10%;
+    margin-left: 0%;
+  }
 }
 
 .logo span a, .logo .work button a, .work .logo button a {
   display: inline-block;
-  margin: 15px 2px;
-}
-
-@media screen and (max-width: 767px) {
-  .logo span a, .logo .work button a, .work .logo button a {
-    color: red;
-    margin: 20px auto 10px auto;
-    padding-right: 5%;
-    width: 30%;
-  }
+  width: 30%;
+  margin: 25% 0;
 }
 
 .search-form {
@@ -2006,25 +2009,44 @@ img, footer * p {
   float: left;
   text-transform: uppercase;
   position: relative;
+  width: 15%;
 }
 
 @media screen and (max-width: 992px) {
   .search-form {
+    width: 20%;
     margin-left: 35%;
   }
 }
 
 @media screen and (max-width: 767px) {
   .search-form {
-    float: left;
-    width: 70%;
-    text-align: center;
-    margin: 10px auto;
+    width: 25%;
+    margin-left: 12%;
   }
 }
 
-.search-form .screen-reader-text {
-  display: none;
+.search-form a {
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  left: 112px;
+  width: 23px;
+  height: 23px;
+  border: none;
+  background: url(../img/search.png) no-repeat 0% 0%;
+}
+
+@media screen and (max-width: 992px) {
+  .search-form a {
+    margin: 2% 2%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .search-form a {
+    margin: 2% 18%;
+  }
 }
 
 .search-form input[type=submit] {
@@ -2038,24 +2060,11 @@ img, footer * p {
   background: url(../img/search.png) no-repeat 0% 0%;
 }
 
-@media screen and (max-width: 767px) {
-  .search-form input[type=submit] {
-    position: relative;
-    left: -3em;
-    top: 0.5em;
-  }
-}
-
 .search-form input[type=search] {
-  width: 100px;
+  width: 70%;
   border: none;
-  margin-right: 65px;
-}
-
-@media screen and (max-width: 767px) {
-  .search-form input[type=search] {
-    width: 20%;
-  }
+  margin-right: 3%;
+  padding: 5px;
 }
 
 .slider {
@@ -2148,7 +2157,7 @@ img, footer * p {
   line-height: 22px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 639px) {
   .work span, .work button {
     margin-top: 0px;
     font-size: 14px;
@@ -2187,7 +2196,7 @@ img, footer * p {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 639px) {
   .news h3 {
     margin-top: 15%;
   }
@@ -2199,7 +2208,7 @@ img, footer * p {
   padding: 10px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 639px) {
   .news img, .news footer * p, footer * .news p {
     background-size: cover;
     width: 50%;
@@ -2221,7 +2230,7 @@ img, footer * p {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 639px) {
   .news .info {
     width: 100%;
   }
@@ -2277,7 +2286,7 @@ img, footer * p {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 639px) {
   .clients img, .clients footer * p, footer * .clients p {
     margin-bottom: 15%;
   }
@@ -2315,7 +2324,7 @@ img, footer * p {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 639px) {
   .clients .next-right {
     left: 86%;
     top: -1.4em;
@@ -2339,7 +2348,7 @@ footer {
   background: #0e364e;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 639px) {
   footer {
     min-height: 350px;
   }
@@ -2356,7 +2365,7 @@ footer * img, footer * p {
   float: left;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 639px) {
   footer * img, footer * p {
     width: 50%;
     margin: 0 auto;
@@ -2393,7 +2402,7 @@ footer * p:last-child {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 639px) {
   footer * p:first-child {
     width: 50%;
   }
@@ -2449,7 +2458,7 @@ footer * p:last-child {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 639px) {
   .footer p:first-child {
     width: 100%;
     text-align: center;
