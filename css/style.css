@@ -1797,8 +1797,8 @@ img, footer * p {
 .main-navigation .menu-item ul::after {
   position: absolute;
   content: "";
-  left: 40%;
-  top: -13%;
+  left: 35%;
+  top: -9%;
   border: 8px solid transparent;
   border-bottom: 8px solid #fff;
 }
@@ -1808,9 +1808,9 @@ img, footer * p {
 }
 
 .main-navigation .menu-item ul li a {
-  width: 180px;
+  width: 220px;
   text-align: left;
-  padding: 10px;
+  padding: 15px;
   line-height: 20px;
   color: #000;
   background: #fff;
@@ -2157,13 +2157,16 @@ img, footer * p {
 
 .work button {
   padding: 6px 0px;
-  margin-top: 15px;
-  margin: 15px 0px 50px 0px;
+  margin: 15px 0px 35px 0px;
   text-transform: uppercase;
   color: #fff;
   background: #0e364e;
   border: none;
   border-bottom: 5px solid #b2b2b2;
+}
+
+.work button:hover {
+  background: #124564;
 }
 
 .work .callback div {
@@ -2240,7 +2243,7 @@ img, footer * p {
 .news hr:after {
   content: "";
   display: block;
-  border-top: 2px solid #b2b2b2;
+  border-top: 1px solid #b2b2b2;
 }
 
 .news .bigitem {

@@ -144,13 +144,14 @@
     button
         @extend span
         padding: 6px 0px
-        margin-top: 15px
-        margin: 15px 0px 50px 0px
+        margin: 15px 0px 35px 0px
         text-transform: uppercase
         color: $white
         background: $blue
         border: none
         border-bottom: 5px solid $grey
+        &:hover
+            background: lighten($blue, 5%)
     .callback
         div
             max-height: 400px
@@ -195,7 +196,7 @@
         &:after
             content: ""
             display: block
-            border-top: 2px solid $grey
+            border-top: 1px solid $grey
     .bigitem
         width: 100%
         height: auto
