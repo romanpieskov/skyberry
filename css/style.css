@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v4.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -1516,7 +1517,7 @@ h2 {
   color: #b2b2b2;
   text-transform: uppercase;
   text-align: center;
-  font-size: 18px;
+  font-size: 1.3em;
   display: block;
   border-bottom: 1px solid #b2b2b2;
   padding-bottom: 10px;
@@ -1746,7 +1747,7 @@ img, footer * p {
 }
 
 .main-navigation ul li a {
-  font-size: 18px;
+  font-size: 1.3em;
   display: block;
   width: 105px;
   line-height: 40px;
@@ -1957,6 +1958,265 @@ img, footer * p {
 }
 
 /* end popup */
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+}
+
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+
+.slick-track:after {
+  clear: both;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+
+.slick-slide img, .slick-slide footer * p, footer * .slick-slide p {
+  display: block;
+}
+
+.slick-slide.slick-loading img, .slick-slide.slick-loading footer * p, footer * .slick-slide.slick-loading p {
+  display: none;
+}
+
+.slick-slide.dragging img, .slick-slide.dragging footer * p, footer * .slick-slide.dragging p {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+/* Slider */
+.slick-loading .slick-list {
+  background: #fff url("./ajax-loader.gif") center center no-repeat;
+}
+
+/* Icons */
+@font-face {
+  font-family: "slick";
+  src: url("./fonts/slick.eot");
+  src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Arrows */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  display: block;
+  line-height: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+  top: 50%;
+  margin-top: -10px\9;
+  /*lte IE 8*/
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+.slick-prev:hover, .slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  outline: none;
+  background: transparent;
+  color: transparent;
+}
+
+.slick-prev:hover:before, .slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+  opacity: 1;
+}
+
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: 0.25;
+}
+
+.slick-prev {
+  left: 0%;
+  z-index: 1;
+}
+
+[dir="rtl"] .slick-prev {
+  left: auto;
+  right: -25px;
+}
+
+.slick-prev:before {
+  content: "";
+  background: url(../../../img/next-left.png) no-repeat 0 0;
+  display: block;
+  width: 45px;
+  height: 110px;
+}
+
+.slick-next {
+  right: 0%;
+  z-index: 1%;
+}
+
+[dir="rtl"] .slick-next {
+  left: -25px;
+  right: auto;
+}
+
+.slick-next:before {
+  content: "";
+  background: url(../../../img/next-right.png) no-repeat 0 0;
+  display: block;
+  width: 45px;
+  height: 110px;
+}
+
+/* Dots */
+.slick-slider {
+  margin-bottom: 30px;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: -45px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  width: 100%;
+}
+
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.slick-dots li button {
+  border: 0;
+  background: transparent;
+  display: block;
+  height: 20px;
+  width: 20px;
+  outline: none;
+  line-height: 0px;
+  font-size: 0px;
+  color: transparent;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.slick-dots li button:hover, .slick-dots li button:focus {
+  outline: none;
+}
+
+.slick-dots li button:hover:before, .slick-dots li button:focus:before {
+  opacity: 1;
+}
+
+.slick-dots li button:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "•";
+  width: 20px;
+  height: 20px;
+  font-family: "slick";
+  font-size: 6px;
+  line-height: 20px;
+  text-align: center;
+  color: black;
+  opacity: 0.25;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots li.slick-active button:before {
+  color: black;
+  opacity: 0.75;
+}
+
 .logo {
   padding: 27px 10px;
 }
@@ -2018,20 +2278,25 @@ img, footer * p {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .logo span, .logo .work button, .work .logo button {
+    width: 10%;
+    margin-left: 5%;
+  }
+}
+
 @media screen and (max-width: 639px) {
   .logo span, .logo .work button, .work .logo button {
-    float: left;
-    width: 80px;
-    margin-left: 35%;
+    float: right;
+    width: 10%;
+    margin-right: 10%;
   }
 }
 
 @media screen and (max-width: 420px) {
   .logo span, .logo .work button, .work .logo button {
     float: left;
-    margin-left: 38%;
-    padding: 0;
-    width: 60px;
+    width: 25%;
   }
 }
 
@@ -2073,7 +2338,7 @@ img, footer * p {
 @media screen and (max-width: 992px) {
   .search-form {
     width: 20%;
-    margin-left: 35%;
+    margin-left: 30%;
   }
 }
 
@@ -2103,7 +2368,8 @@ img, footer * p {
 
 @media screen and (max-width: 767px) {
   .search-form a {
-    margin: 2% 18%;
+    margin: 2% 14%;
+    margin-left: 18%;
   }
 }
 
@@ -2200,7 +2466,7 @@ img, footer * p {
   left: 7%;
   color: #fff;
   width: 65%;
-  font-size: 18px;
+  font-size: 1.3em;
   font-weight: 400;
 }
 
@@ -2213,9 +2479,9 @@ img, footer * p {
 
 @media (max-width: 767px) {
   .work .info-work {
-    top: 65%;
-    font-size: 18px;
-    line-height: 14px;
+    top: 60%;
+    font-size: 1.2em;
+    line-height: 1.2em;
     width: 50%;
   }
 }
@@ -2224,13 +2490,14 @@ img, footer * p {
   .work .info-work {
     top: 60%;
     width: 55%;
-    font-size: 12px;
+    font-size: 0.85em;
+    line-height: 1.1em;
   }
 }
 
 @media (max-width: 320px) {
   .work .info-work {
-    font-size: 10px;
+    font-size: 0.9em;
   }
 }
 
@@ -2240,7 +2507,7 @@ img, footer * p {
   width: 100%;
   text-align: center;
   color: #0e364e;
-  font-size: 18px;
+  font-size: 1.3em;
   font-weight: bold;
   font-family: Open Sans, sans-serif;
   letter-spacing: 0.5px;
@@ -2358,10 +2625,6 @@ img, footer * p {
   margin-top: 30px;
 }
 
-.clients .logo-partners {
-  margin-top: 25px;
-}
-
 .clients img, .clients footer * p, footer * .clients p {
   display: block;
   margin: 20px auto;
@@ -2385,46 +2648,7 @@ img, footer * p {
 .clients p {
   text-align: justify;
   font-size: 15px;
-  margin: 40px 0px 50px 0px;
-}
-
-.clients .next-left, .clients .next-right {
-  display: block;
-  width: 45px;
-  height: 100px;
-  background: url(../img/next-left.png) no-repeat 0px 0px;
-  position: absolute;
-}
-
-@media (max-width: 992px) {
-  .clients .next-left, .clients .next-right {
-    top: -20px;
-  }
-}
-
-.clients .next-right {
-  background: url(../img/next-right.png) no-repeat 0px 0px;
-  left: 95%;
-  top: -5%;
-}
-
-@media (max-width: 992px) {
-  .clients .next-right {
-    top: -25px;
-  }
-}
-
-@media (max-width: 639px) {
-  .clients .next-right {
-    left: 86%;
-    top: -1.4em;
-  }
-}
-
-.logo-partners > img, footer * .logo-partners > p {
-  background-size: cover;
-  width: 100%;
-  height: auto;
+  margin: 0px 0px 50px 0px;
 }
 
 footer {
@@ -2499,7 +2723,7 @@ footer * p:last-child {
   footer * p:nth-child(2) {
     margin-left: 0%;
     width: 80%;
-    font-size: 18px;
+    font-size: 1.3em;
     text-align: center;
   }
   footer * p:nth-child(3), footer * p:last-child {
