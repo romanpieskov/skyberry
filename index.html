@@ -13,11 +13,14 @@
 	<header>
 		<section class="container logo">
 			<a href="index.html"><img src="img/logo.png" alt="logo"></a>
-			<form action="#" class="search-form">
-				<input type="search" placeholder="Поиск по сайту">
-				<!--<input type="submit"> -->
-				<a href="search.html"></a>
-			</form>
+
+			<fieldset class="search-form">
+			<label for="search"></label>
+			   <input name="search" id="search" value="" type="text" placeholder="Поиск по сайту">
+			<input name="id" value="79" type="hidden">
+			   <input value="" type="submit">
+			</fieldset>
+
 			<span> <a href="#">ru</a> &nbsp;<a href="#">eng</a> </span>
 		</section>
 		<nav class="main-navigation">
@@ -77,33 +80,53 @@
 			</div>
 			<div class="row callback">
 				<div class="col-md-6 col-sm-6 col-xs-12"><span>+38 099 175 62 38 / +38 096 389 50 64</span>
-					<button id="callback">перезвонить вам?</button>
+					<a href="#Callback" class="btn">перезвонить вам?</a>
 
-					<div id="popup">
-						<form id="contact_form" role="form" method="post" action="./php/order.php">
-							<!-- прописать обработчик формы -->
-							<h3>Мы перезвоним</h3>
-							<input type="text" name="name" placeholder="Как к вам обращаться?">
-							<input type="text" name="tel" class="required" placeholder="Контакный телефон (обязательно)">
-							<a href="#" class="btn button form_submit">Заказать</a>
-						</form>
-					</div>
+					<div id="Callback" class="Dialog">
+						<div class="modal-window">
 
+							<a href="#close" title="Закрыть" class="close">X</a>
+							<span></span><h3> Обратный звонок </h3>
+							<p> Оставьте ваши данные заполнив форму и наш консультант свяжется с Вами в ближайшее время</p>
+					     <form action="#" method="post">
+
+					                <label>Ваше имя</label>
+					                <input name="name" class="form-control" value="" required="" type="text" required>
+
+					                <label>Телефон</label>
+					                <input name="phone" class="form-control" value="" required="" type="text" required>
+
+					                <p class="conf">Ваши данные не будут переданы третьим лицам</p>
+
+					                <input class="form-control" value="Отправить" name="callback" type="submit">
+
+					              </form>
+						</div>
+					  </div>
 				</div>
 				<div class="col-md-6 col-sm-6 col-xs-12"><span>bariondima@ukr.net</span>
-					<button id="write">написать нам</button>
-				</div>
+					<a href="#Write" class="btn">написать нам</a>
+					<div id="Write" class="Dialog">
+						<div class="modal-window">
 
-				<div id="popup1">
-					<form id="contact_form1" role="form" method="post" action="./php/write.php">
-						<!-- прописать обработчик формы -->
-						<h3>Оставьте сообщение</h3>
-						<input type="text" name="name" placeholder="Как к вам обращаться?">
-						<input type="text" name="tel" class="required" placeholder="Контакный телефон (обязательно)">
-						<input type="text" name="email" placeholder="Email">
-						<textarea name="message" placeholder="Текст сообщения" rows="5"></textarea>
-						<a href="#" class="btn button form_submit">Отправить</a>
-					</form>
+							<a href="#close" title="Закрыть" class="close">X</a>
+							<span></span><h3> Написать письмо </h3>
+							<p> Оставьте ваши данные заполнив форму и мы получим ваше письмо</p>
+						 <form action="#" method="post">
+
+									<label>Ваше имя</label>
+									<input name="name" class="form-control" value="" required="" type="text" required>
+
+									<label>Ваше сообщение</label>
+									<input name="message" class="form-control" value="" required="" type="textarea" required>
+
+									<p class="conf">Ваши данные не будут переданы третьим лицам</p>
+
+									<input class="form-control" value="Отправить" name="message" type="submit">
+
+								  </form>
+						</div>
+					  </div>
 				</div>
 			</div>
 		</section>

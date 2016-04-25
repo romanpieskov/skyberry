@@ -1,0 +1,127 @@
+[{
+    "caption": "ItemGallery",
+    "fields": [{
+        "field": "Data",
+        "caption": "Дата заказа",
+        "inputTV": "date"
+    },{
+        "field": "Price",
+        "caption": "Стоимость",
+        "inputTV": "price"
+    },{
+        "field": "Image",
+        "caption": "Превью",
+        "inputTV": "image"
+    },{
+        "field": "Time",
+        "caption": "Время выполнения",
+        "inputTV": "time"
+    },{
+        "field": "Category",
+        "caption": "Категория",
+        "inputTV": "category"
+    }
+    ]
+}]
+
+[{
+    "caption": "ItemGallery",
+    "fields": [{
+        "field": "description",
+        "caption": " Описание"
+    },{
+        "field": "link",
+        "caption": "Ссылка"
+    },{
+        "field": "image",
+        "caption": "Изображение",
+        "inputTV": "itemImg"
+    }
+    ]
+
+
+
+    }]
+
+
+
+
+[{ "caption": "Baner",
+    "fields": [{
+        "field": "link",
+        "caption": "Ссылка"
+    },{
+        "field": "image",
+        "caption": "Изображение",
+        "inputTV": "banerImg"
+    }
+    ]
+}]
+
+
+    [
+    {
+      "header": "Cсылка","sortable": "true", "dataIndex": "link"
+    },
+
+    {
+      "header": "Изображение","sortable": "true", "dataIndex": "image"
+    },
+
+    {
+      "header": "Описание", "sortable": "true", "dataIndex": "description"
+
+    }
+    ]
+
+
+
+
+    [
+    {
+      "header": "Дата","sortable": "true", "dataIndex": "Data"
+    },
+
+    {
+      "header": "Изображение","sortable": "true", "dataIndex": "Image"
+    },
+
+    {
+      "header": "Стоимость", "sortable": "true", "dataIndex": "Price"
+    },
+
+    {
+      "header": "Время", "sortable": "true", "dataIndex": "Time"
+    },
+
+    {
+      "header": "Категория", "sortable": "true", "dataIndex": "Category"
+    }
+    ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        [
+        {
+          "header": "Cсылка","sortable": "true", "dataIndex": "link"
+        },
+
+        {
+          "header": "Изображение","sortable": "true", "dataIndex": "image"
+        }
+        ]

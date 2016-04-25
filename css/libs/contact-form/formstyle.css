@@ -1,0 +1,116 @@
+.Dialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  transition: opacity 400ms ease-in;
+  display: none;
+  pointer-events: none;
+}
+
+.Dialog:target {
+  display: block;
+  pointer-events: auto;
+}
+
+.modal-window {
+  margin: 20% auto;
+  width: 430px;
+  background: linear-gradient(to top, #f79800, #edc17a);
+  color: #fff;
+  border: 1px solid #f59700;
+  border-radius: 5px;
+  padding: 1% 2% 2% 4%;
+}
+
+.modal-window a {
+  text-align: right;
+}
+
+.modal-window a:hover {
+  color: #000;
+}
+
+.modal-window span {
+  display: inline-block;
+  width: 30px;
+  height: 28px;
+  background: url(../../../img/forms/call.png);
+  background: url(../img/forms/callform.png);
+  float: left;
+  margin: 4% 4% 0 1%;
+}
+
+.modal-window h3 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 2.5% 0 0 0;
+}
+
+.modal-window p {
+  font-size: 0.85em;
+  width: 90%;
+  padding: 0 10% 0 15%;
+  margin: 1% 0;
+  line-height: 1.25em;
+}
+
+.modal-window label {
+  display: inline-block;
+  width: 27%;
+  padding-left: 1%;
+  padding-right: 2%;
+  font-size: 0.83em;
+  text-align: right;
+}
+
+.modal-window label:first-child {
+  margin-top: 8%;
+}
+
+.modal-window input[type="text"], .modal-window input[type="password"] {
+  border: 1px solid #f79800;
+  padding: 2%;
+  width: 56%;
+  margin: 2% 0;
+  color: #000;
+}
+
+.modal-window .conf {
+  padding: 0 10% 0 28%;
+  font-size: 0.8em;
+  line-height: 1em;
+}
+
+.modal-window input[type="submit"] {
+  margin: 3% 28%;
+  width: 120px;
+  height: 40px;
+  background: linear-gradient(to top, #e69800, #efc480);
+  font-weight: bold;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px 0px #6c4302;
+  outline: none;
+}
+
+.modal-window input[type="submit"]:active {
+  box-shadow: -1px -1px 2px 0px #6c4302;
+}
+
+.modal-window input[type="submit"]:focus {
+  box-shadow: -1px -1px 2px 0px #6c4302;
+}
+
+.modal-window input[type="submit"]:visited {
+  box-shadow: -1px -1px 2px 0px #6c4302;
+}
+
+.fieldset {
+  border: 1px solid transparent;
+}
