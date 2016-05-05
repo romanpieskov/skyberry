@@ -23,36 +23,21 @@
             float: left
             @media screen and ( max-width: $tab )
                 margin-left: 5%
-            @media screen and ( max-width: $mobile)
-                background-size: cover
-                width: 50%
-                height: auto
+            @media screen and ( max-width: $mobile )
+                margin-left: 5%
                 position: absolute
-                top: 1.8%
-            @media screen and ( max-width: $mini-mobile)
-                background-size: cover
-                width: 50%
-                height: auto
-                position: absolute
-                top: 2%
+                top: 2.7%
+                left: 0
     span
         float: left
         display: inline-block
         margin: 0% 2%
         text-transform: uppercase
-        @media screen and ( max-width: $nout)
-            width: 10%
-            margin-left: 0%
-        @media screen and ( max-width: $tab )
-            width: 10%
-            margin-left: 5%
+        @media screen and ( max-width: $mini-mobile)
+            margin-left: 17%
         @media screen and ( max-width: $mobile)
             float: right
-            width: 10%
-            margin-right: 10%
-        @media screen and ( max-width: $mini-mobile)
-            float: left
-            width: 25%
+            padding-right: 2%
         a
             display: inline-block
             width: 30%
@@ -76,6 +61,12 @@
     float: left
     text-transform: uppercase
     position: relative
+    @media screen and ( max-width: $nout)
+        margin-left: 27%
+    @media screen and ( max-width: $tab )
+        margin-left: 10%
+    @media screen and ( max-width: $mobile )
+        margin-left: 0
     input[type=submit]
         display: inline-block
         width: 23px
