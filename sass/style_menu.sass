@@ -44,7 +44,7 @@
                 font-size: $headers
                 display: block
                 width: $widthMenu
-                line-height: $heightMenu; // выравнивание по центру пунктов
+                line-height: $heightMenu
                 color: $colorMenu
                 &:hover
                     text-decoration: none
@@ -60,28 +60,28 @@
     .menu-item
         position: relative
         z-index: 1
+        &::after
+            position: absolute
+            display: none
+            content: ""
+            left: 35%
+            bottom: 0
+            border: 8px solid transparent
+            border-bottom: 8px solid $white
+            @media screen and ( max-width: $mobile)
+                display: none
         &:hover > ul
+            display: block
+        &:hover::after
             display: block
         ul
             position: absolute
-            top: $heightMenu; // прилипание подменю к основному
             left: -40px
             display: none
             height: auto
             @media screen and ( max-width: $mobile)
                 position: relative
                 top: 0
-            &::after
-                position: absolute
-                content: ""
-                left: 35%
-                top: -11%
-                border: 8px solid transparent
-                border-bottom: 8px solid $white
-                &:hover
-                    border-bottom: 8px solid #f6f6f6
-                @media screen and ( max-width: $mobile)
-                    display: none
             li
                 display: block
                 a

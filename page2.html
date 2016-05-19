@@ -43,35 +43,36 @@
         </nav>
     </header>
     <main class="container">
-        <ul class="menu-production">
-            <li class="first"><a href="index/produkcziya/standartnyie-detali/">Стандартные детали</a></li>
-            <li><a href="index/produkcziya/nestandartnyie-resheniya/">нестандартные решения</a></li>
-            <li><a href="index/produkcziya/agrarnyie-resheniya/">Аграрные решения</a></li>
-            <li class="last"><a href="index/produkcziya/konstrukczii/">Конструкции</a></li>
-        </ul>
-
-        <!-- <section class="col-md-3">
-            <aside>
-                <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Возвращайся пустился свой заголовок рекламных пунктуация осталось снова, власти напоивший рыбными запятой ведущими, несколько, если, он пор рукописи семантика продолжил!</p>
-            </aside>
-        </section>
-        <section class="col-md-3">
-            <aside>
-                <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Языком необходимыми бросил раз буквоград пояс там, вопроса рукопись, проектах путь ты маленькая всеми он, свое переписывается коварный даль большого.</p>
-            </aside>
-        </section>
-        <section class="col-md-3">
-            <aside>
-                <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Возвращайся пустился свой заголовок рекламных пунктуация осталось снова, власти напоивший рыбными запятой ведущими, несколько, если, он пор рукописи семантика продолжил!</p>
-            </aside>
-        </section>
-        <section class="col-md-3">
-            <aside>
-                <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Языком необходимыми бросил раз буквоград пояс там, вопроса рукопись, проектах путь ты маленькая всеми он, свое переписывается коварный даль большого.</p>
-            </aside>
-        </section> -->
-
-        
+        <div class="col-sm-6 gall">
+            <img src="img/zoom/img5.jpg" alt="мото" id="zoom" data-zoom-image="img/zoom/big/motobig.png">
+            <div id="gall">
+                <a href="#" data-image="img/zoom/img5.jpg" data-zoom-image="img/zoom/big/motobig.png">
+                    <img src="img/zoom/img5.jpg" alt="фото" id="img_04" class="active">
+                </a>
+                <a href="#" data-image="img/zoom/img4.jpg" data-zoom-image="img/zoom/big/city.jpg">
+                    <img src="img/zoom/img4.jpg" alt="фото" id="img_04">
+                </a>
+                <a href="#" data-image="img/zoom/img5.jpg" data-zoom-image="img/zoom/big/city.jpg">
+                    <img src="img/zoom/img5.jpg" alt="фото" id="img_04">
+                </a>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <h2>Звездочка комбайна CLASS</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. </p>
+                </div>
+                <div class="col-md-6">
+                    <div class="ref">
+                        <a href="#">Заказать</a>
+                        <a href="#">Перезвонить</a>
+                        <a href="#">Написать нам</a>
+                    </div>
+                </div>
+            </div>
+            <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Жизни толку дороге но, заманивший сих, путь меня продолжил большого сбить грустный языкового переписывается дорогу имеет инициал заглавных даже реторический?</p>
+        </div>
     </main>
     <footer>
         <div class="container">
@@ -97,8 +98,36 @@
                 </div>
             </div>
         </div>
-    </footer>
 
+    <div class="pagination">
+        <ul class="pagination">
+            <li class="disabled">
+                <span>Первая</span>
+            </li>
+            <li class="disabled">
+                <span>«</span>
+            </li>
+            <li class="active">
+                <a href="index/produkcziya/">1</a>
+            </li>
+            <li>
+                <a href="index/produkcziya/?page=2">2</a>
+            </li>
+            <li class="control">
+                <a href="index/produkcziya/?page=2">»</a>
+            </li>
+            <li class="control">
+                <a href="index/produkcziya/?page=2">Последняя</a>
+            </li>
+        </ul>
+    </div>
+        
+    </footer>
+<script src="js/elevatezoom-master/jquery-1.8.3.min.js"></script>
+<script src="js/elevatezoom-master/jquery.elevatezoom.js"></script>
+<script>
+    $("#zoom").elevateZoom({gallery: 'gall',zoomWindowWidth: 150,zoomWindowHeight: 150, responsive: true,  galleryActiveClass: 'active' });
+</script>
 
 </body>
 
