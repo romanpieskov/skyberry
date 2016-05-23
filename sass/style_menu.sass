@@ -9,10 +9,10 @@
     padding-left: 0px
 .hamburger
     display: none
-    @media screen and ( max-width: $mobile)
-        display: block
-        left: 78%
-        margin: 5% 0%
+    // @media screen and ( max-width: $mobile)
+    //     display: block
+    //     left: 78%
+    //     margin: 5% 0%
 .mobilemenu
     display: block
     position: relative
@@ -24,9 +24,9 @@
     min-height: $heightMenu
     width: 100%
     padding: 0
-    @media screen and ( max-width: $mobile)
-        background: $white
-        border-bottom: 1px solid grey
+    // @media screen and ( max-width: $mobile)
+    //     background: $white
+    //     border-bottom: 1px solid grey
     .menu
         margin-top: 2px
         margin-bottom: 0px
@@ -35,9 +35,9 @@
         z-index: 1
         +lineShw
         text-align: $posMenu
-        @media screen and ( max-width: $mobile)
-            position: relative
-            display: none
+        // @media screen and ( max-width: $mobile)
+        //     position: relative
+        //     display: none
     ul
         li
             display: inline-block
@@ -50,14 +50,14 @@
                 &:hover
                     text-decoration: none
                     background: $colorHoverMenu
-    @media screen and ( max-width: $mobile)
-        display: block
-        ul
-            li
-                width: 100%
-                a
-                    width: 100%
-                    color: #000
+    // @media screen and ( max-width: $mobile)
+    //     display: block
+    //     ul
+    //         li
+    //             width: 100%
+    //             a
+    //                 width: 100%
+    //                 color: #000
     .menu-item
         position: relative
         z-index: 1
@@ -69,8 +69,8 @@
             bottom: 0
             border: 8px solid transparent
             border-bottom: 8px solid $white
-            @media screen and ( max-width: $mobile)
-                display: none
+            // @media screen and ( max-width: $mobile)
+            //     display: none
         &:hover > ul
             display: block
         &:hover::after
@@ -80,9 +80,9 @@
             left: -40px
             display: none
             height: auto
-            @media screen and ( max-width: $mobile)
-                position: relative
-                top: 0
+            // @media screen and ( max-width: $mobile)
+            //     position: relative
+            //     top: 0
             li
                 display: block
                 a
@@ -96,5 +96,5 @@
                     &:hover
                         color: $colorHoverTextSubMenu
                         background: $colorHoverSubMenu
-                    @media screen and ( max-width: $mobile)
-                        width: 100%
+                    // @media screen and ( max-width: $mobile)
+                    //     width: 100%

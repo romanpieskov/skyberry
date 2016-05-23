@@ -13,11 +13,11 @@
 // шапка сайта
 .logo
     padding: 30px 10px
-    @media screen and ( max-width: $tab )
-        // background: red
-    @media screen and ( max-width: $mobile)
-        padding: 2% 0px
-        // background: $blue
+    // @media screen and ( max-width: $tab )
+    //     // background: red
+    // @media screen and ( max-width: $mobile)
+    //     padding: 2% 0px
+    //     // background: $blue
     .top-mnu
         float: right
         display: inline-block
@@ -77,13 +77,13 @@
     a
         img
             float: left
-            @media screen and ( max-width: $tab )
-                margin-left: 5%
-            @media screen and ( max-width: $mobile )
-                margin-left: 5%
-                position: absolute
-                top: 2.7%
-                left: 0s
+            // @media screen and ( max-width: $tab )
+            //     margin-left: 5%
+            // @media screen and ( max-width: $mobile )
+            //     margin-left: 5%
+            //     position: absolute
+            //     top: 2.7%
+            //     left: 0
 // шапка сайта
 
 // меню сайта
@@ -152,8 +152,8 @@
 
 // галерея работ
 .item-work
-    @media(max-width: 767px)
-        margin: 1.5% 0px
+    // @media(max-width: 767px)
+    //     margin: 1.5% 0px
 .work
     h2
         margin-top: 0
@@ -176,21 +176,21 @@
         width: 65%
         font-size: $headers
         font-weight: 400
-        @media(max-width: $nout)
-            font-size: $base
-            line-height: $base
-        @media(max-width: 767px)
-            top: 60%
-            font-size: 1.2em
-            line-height: 1.2em
-            width: 50%
-        @media(max-width: 420px)
-            top: 60%
-            width: 55%
-            font-size: 0.85em
-            line-height: 1.1em
-        @media(max-width: 320px)
-            font-size: 0.9em
+        // @media(max-width: $nout)
+        //     font-size: $base
+        //     line-height: $base
+        // @media(max-width: 767px)
+        //     top: 60%
+        //     font-size: 1.2em
+        //     line-height: 1.2em
+        //     width: 50%
+        // @media(max-width: 420px)
+        //     top: 60%
+        //     width: 55%
+        //     font-size: 0.85em
+        //     line-height: 1.1em
+        // @media(max-width: 320px)
+        //     font-size: 0.9em
     span
         margin-top: 28px
         display: inline-block
@@ -202,9 +202,9 @@
         font-family: Open Sans, sans-serif
         letter-spacing: 0.5px
         line-height: 22px
-        @media(max-width: $mobile)
-            margin-top: 0px
-            font-size: $base
+        // @media(max-width: $mobile)
+        //     margin-top: 0px
+        //     font-size: $base
     button
         @extend span
         padding: 6px 0px
@@ -236,29 +236,29 @@
         margin: 0
     h3
         font-weight: 600
-        @media(max-width: $nout)
-            font-size: 18px
-        @media(max-width: $mobile)
-            margin-top: 15%
+        // @media(max-width: $nout)
+        //     font-size: 18px
+        // @media(max-width: $mobile)
+        //     margin-top: 15%
     img
         float: left
         display: block
         padding: 10px
         padding-top: 0
-        @media(max-width: $mobile)
-            background-size: cover
-            width: 50%
-            height: auto
+        // @media(max-width: $mobile)
+        //     background-size: cover
+        //     width: 50%
+        //     height: auto
     .info
         // min-height: 100px
         // max-height: 65px
         overflow-y: hidden
-        @media(max-width: $nout)
-            font-size: 16px
-            width: 60%
-            text-align: justify
-        @media(max-width: $mobile)
-            width: 100%
+        // @media(max-width: $nout)
+        //     font-size: 16px
+        //     width: 60%
+        //     text-align: justify
+        // @media(max-width: $mobile)
+        //     width: 100%
     a
         color: $grey
         text-decoration: underline
@@ -318,8 +318,8 @@ footer
     margin-top: 10px
     border-top: 5px solid $grey
     background: $blue
-    @media(max-width: $mobile)
-        min-height: 350px
+    // @media(max-width: $mobile)
+    //     min-height: 350px
     *
         color: $white
         display: inline-block
@@ -327,10 +327,10 @@ footer
             margin-top: 10px
             padding-top: 20px
             float: left
-            @media(max-width: $mobile)
-                width: 50%
-                margin: 0 auto
-                float: none
+            // @media(max-width: $mobile)
+            //     width: 50%
+            //     margin: 0 auto
+            //     float: none
         p
             @extend img
             text-align: center
@@ -343,29 +343,29 @@ footer
                 text-align: right
                 float: right
                 width: 15%
-            @media(max-width: $nout)
-                &:nth-child(2)
-                    margin-left: 5%
-                    width: 35%
-                    text-align: left
-                &:last-child
-                    width: 20%
-                    padding-top: 20px
-            @media(max-width: $mobile)
-                &:first-child
-                    width: 50%
-                &:nth-child(2)
-                    margin-left: 0%
-                    width: 80%
-                    font-size: $headers
-                    text-align: center
-                &:nth-child(3)
-                    width: 50%
-                    float: left
-                    font-size: $base
-                    padding-top: 20px
-                &:last-child
-                    @extend :nth-child(3)
+            // @media(max-width: $nout)
+            //     &:nth-child(2)
+            //         margin-left: 5%
+            //         width: 35%
+            //         text-align: left
+            //     &:last-child
+            //         width: 20%
+            //         padding-top: 20px
+            // @media(max-width: $mobile)
+            //     &:first-child
+            //         width: 50%
+            //     &:nth-child(2)
+            //         margin-left: 0%
+            //         width: 80%
+            //         font-size: $headers
+            //         text-align: center
+            //     &:nth-child(3)
+            //         width: 50%
+            //         float: left
+            //         font-size: $base
+            //         padding-top: 20px
+            //     &:last-child
+            //         @extend :nth-child(3)
 .footer
     text-align: left
     & p:first-child
@@ -378,29 +378,29 @@ footer
         float: right
         width: 21%
         padding-top: 4%
-    @media(max-width: $nout)
-        & p:first-child
-            margin: 0
-            width: 30%
-            text-align: left
-        & p:nth-child(2)
-            margin: 0
-            margin-left: 2%
-            width: 40%
-        & p:last-child
-            margin: 0
-            width: 26%
-            padding-top: 4%
-    @media(max-width: $mobile)
-        & p:first-child
-            width: 100%
-            text-align: center
-        & p:nth-child(2)
-            width: 100%
-            text-align: center
-        & p:last-child
-            width: 100%
-            text-align: center
+    // @media(max-width: $nout)
+    //     & p:first-child
+    //         margin: 0
+    //         width: 30%
+    //         text-align: left
+    //     & p:nth-child(2)
+    //         margin: 0
+    //         margin-left: 2%
+    //         width: 40%
+    //     & p:last-child
+    //         margin: 0
+    //         width: 26%
+    //         padding-top: 4%
+    // @media(max-width: $mobile)
+    //     & p:first-child
+    //         width: 100%
+    //         text-align: center
+    //     & p:nth-child(2)
+    //         width: 100%
+    //         text-align: center
+    //     & p:last-child
+    //         width: 100%
+    //         text-align: center
     .social-box1
         margin: 0 10px
         width: 35px
