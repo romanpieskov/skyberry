@@ -39,6 +39,26 @@
 //                 });
 
 
+
+
+// $('.news-item').slick({
+//   dots: false,
+//   infinite: true,
+//   speed: 300,
+//   slidesToShow: 1,
+//   centerMode: true
+// });
+
+
+$(document).ready(function(){
+
+$('.slider').slick({
+    autoplay: false,
+    dots: false,
+    slidesToShow: 1,
+    responsive: true
+  });
+    
 $('.responsive').slick({
   dots: false,
   infinite: true,
@@ -46,4 +66,13 @@ $('.responsive').slick({
   slidesToShow: 2,
   centerMode: true,
   variableWidth: true
+});
+    
+        
+$('.news-item').slick({
+    autoplay: false,
+    dots: false,
+    slidesToShow: 1,
+    responsive: true
+  });
 });

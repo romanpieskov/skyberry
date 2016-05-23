@@ -93,12 +93,21 @@
 // слайдер сайта
 .slider
     margin-top: 0px
+    // z-index: -1
     img
         backgroud-size: cover
         display: block
         width: 100%
         height: auto
         padding: 0
+    .slick-next
+        right: 1%
+        display: none
+        // z-index: 2
+    .slick-prev
+        left: 1%
+        display: none
+        // z-index: 2
 // слайдер сайта
 
 // сайдбар на внутренней
@@ -146,6 +155,8 @@
     @media(max-width: 767px)
         margin: 1.5% 0px
 .work
+    h2
+        margin-top: 0
     a
         display: block
         &:hover img
@@ -214,6 +225,13 @@
 // новости и статьи
 .news
     margin-top: 20px
+
+.news>div
+    // margin-left: 13%
+    // width: 90%
+    p
+        padding-top: 0
+        margin-top: 0
     h2
         margin: 0
     h3
@@ -226,13 +244,14 @@
         float: left
         display: block
         padding: 10px
+        padding-top: 0
         @media(max-width: $mobile)
             background-size: cover
             width: 50%
             height: auto
     .info
-        min-height: 100px
-        max-height: 100px
+        // min-height: 100px
+        // max-height: 65px
         overflow-y: hidden
         @media(max-width: $nout)
             font-size: 16px
@@ -250,10 +269,26 @@
         &:after
             content: ""
             display: block
-            border-top: 1px solid $grey
+            border-top: 1px solid #b2b2b2
     .bigitem
         width: 100%
         height: auto
+.news-item > div
+    width: 80%
+    // margin-top: 1%
+    margin-left: 5%
+    img
+        padding-top: 0
+    p
+        max-height: 64px
+.news-item
+    margin-bottom: 0
+    img
+        max-width: 140px
+        margin-left: 20%
+        padding-top: 0
+    &:focus
+        outline: none
 // новости и статьи
 // клиенты и партнеры
 .clients
@@ -266,6 +301,11 @@
         text-align: justify
         font-size: 15px
         margin: 20px 0px 50px 0px
+.responsive
+    .slick-list
+        margin: 0 50px
+    .slick-next
+        right: 0
 // клиенты и партнеры
 
 
@@ -515,6 +555,7 @@ footer
     padding: 10px
     margin-bottom: 20px
     border: 1px solid #ededed
+    // min-height: 270px
     text-align: center
     &:hover
         box-shadow: 0 0 7px rgba(0,0,0,0.15)
@@ -526,15 +567,15 @@ footer
 #zoom
     width: 100%
     height: auto
-    max-height: 300px
-    max-width: 300px
+    max-height: 420px
+    max-width: 420px
 .zoomLens
     max-height: 150px
     max-width: 150px
 .gall
-    margin-top: 5%
+    margin-top: 2.5%
 #gall
-    margin: 1% 0 15%
+    // margin: 1% 0 15%
     a
         display: inline-block
         width: 100px
@@ -544,6 +585,7 @@ footer
             width: 100%
             height: auto
 .ref
+    margin-top: 7%
     a
         display: block
         background: $blue
@@ -569,3 +611,90 @@ footer
     img
         display: block
         padding: 0 10px
+
+
+.news-info
+    margin: 0.5% auto
+    h3
+        margin-bottom: 0
+    img
+        display: block
+        float: left
+        margin-right: 2%
+        margin-left: 20%
+    // h3
+    //     a
+    //         margin-top: 0
+    //         margin-left: 2%
+    //         width: 70%
+    //         font-size: 16px
+    //         font-size: 1.14286em
+    //         font-weight: 400
+    //         color: #333
+    //         text-decoration: underline
+    //         max-height: 70px
+    //         overflow: hidden
+    p
+        max-height: 100px
+        width: 74%
+        overflow: hidden
+        padding-left: 1%
+        text-align: justify
+        hyphens: auto
+        margin-bottom: 0
+    a
+        width: 100%
+        display: block
+        margin-left: 4%
+        color: #000
+        text-decoration: underline
+        font-size: 1.14em
+.news-item
+    .img
+        height: 100%
+    img
+        padding-top: 0
+    h3
+        margin: 0
+        // margin-top: -1%
+
+        a
+            line-height: 20px
+            margin-top: 0
+            margin-left: 0
+            width: 70%
+            font-size: 16px
+            font-size: 1.14286em
+            font-weight: 400
+            color: #333
+            text-decoration: underline
+            max-height: 70px
+            overflow: hidden
+    a
+        color: #1d1d1b
+        // margin-left: 34%
+    p
+        margin: 0
+        // min-height: 100px
+        max-height: 65px
+        overflow: hidden
+.news-page
+    h3
+        width: 100%
+        a
+            font-size: 1.2em
+            color: #1d1d1b
+            font-weight: 700
+            line-height: 18px
+    p
+        min-height: 105px
+    a
+        display: block
+        margin-left: 4%
+    img
+        max-width: 200px
+        padding-top: 0
+
+hr
+    border-top: 1px solid #b2b2b2
+    margin-top: 0
