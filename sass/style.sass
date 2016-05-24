@@ -10,6 +10,7 @@
 @import "gallery"
 @import "libs/contact-form/formstyle"
 
+
 // шапка сайта
 .logo
     padding: 30px 10px
@@ -69,6 +70,10 @@
         @extend .search
         // background: url(../../img/top-sprite.jpg) no-repeat 2px 0
         background: url(../img/top-sprite.jpg) no-repeat 0 0
+        @media screen and (max-width: 768px)
+            background: url(../img/mobcall.png) no-repeat 0 0
+            height: 30px
+            width: 30px
         &::after
             padding: 2px 0
             width: 100px
@@ -91,6 +96,8 @@
 
 // меню сайта
 // слайдер сайта
+main
+    max-height: 395px
 .slider
     margin-top: 0px
     // z-index: -1
@@ -108,6 +115,10 @@
         left: 1%
         display: none
         // z-index: 2
+.tab-none
+    display: block
+.tab-view
+    display: none
 // слайдер сайта
 
 // сайдбар на внутренней
@@ -293,8 +304,8 @@
 // клиенты и партнеры
 .clients
     position: relative
-    h2
-        margin-top: 4%
+    // h2
+    //     margin-top: 4%
     .responsive
         margin-top: 3%
     p
@@ -313,7 +324,7 @@ footer
     position: absolute
     width: 100%
     bottom: 0
-    min-height: 200px
+    // min-height: 350px
     text-align: center
     margin-top: 10px
     border-top: 5px solid $grey
@@ -414,6 +425,7 @@ footer
         @extend .social-box1
         // background: url(/img/sprite-item.png) no-repeat 33.33333333% 0%
         background: url(../img/sprite-item.png) no-repeat 33.33333333% 0%
+        display: none
     .social-box3
         @extend .social-box1
         // background: url(/img/sprite-item.png) no-repeat 66.33333333% 0%
@@ -422,6 +434,7 @@ footer
         @extend .social-box1
         // background: url(/img/sprite-item.png) no-repeat 100% 0%
         background: url(../img/sprite-item.png) no-repeat 100% 0%
+        display: none
 
 // формы обратной связи
 .btn
@@ -698,3 +711,7 @@ footer
 hr
     border-top: 1px solid #b2b2b2
     margin-top: 0
+    width: 100%
+
+
+@import "responsive.sass"

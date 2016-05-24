@@ -1,0 +1,110 @@
+@import "vars"
+
+@media screen and (min-width: 769px)
+    .xs-none
+        display: block
+    .sm-none
+        display: block
+    .md-none
+        display: none
+@media screen and (max-width: 768px)
+    .xs-none
+        display: none
+    .sm-none
+        display: none
+    .md-none
+        display: block
+    body
+        margin-bottom: 140px
+    .logo
+        a
+            img
+                @media screen and (max-width: 500px)
+                    width: 50%
+                    height: auto
+                    margin-top: 3%
+    .menu-btn
+        width: 31px
+        height: 20px
+        float: right
+        background: url(../img/mobileicon.png) no-repeat 0 0
+        margin: 14px 25px
+    .pushy
+        p
+            color: #fff
+            padding: 5%
+        p.bold
+            font-weight: 700
+    .logo
+        .top-mnu
+            display: none
+        .callback
+            display: block
+        span
+            display: inline-block
+            float: right
+    .work
+        .item-work
+            margin-top: 20px
+        .info-work
+            width: 60%
+            line-height: 1.25em
+            font-size: 1.25em
+            @media screen and (max-width: 500px)
+                line-height: 1em
+                font-size: 1em
+            @media screen and (max-width: 500px)
+                line-height: 1.3em
+                font-size: 0.8em
+                width: 62%
+    .news-item
+        max-height: 160px
+        min-width: 115px
+        @media screen and (max-width: 350px)
+            margin-bottom: 10px
+        .slick-next
+            right: 3%
+        .slick-prew
+            left: 3%
+        img
+            max-width: 100px
+            width: 100%
+            height: auto
+            background-size: cover
+        div>img
+            @media screen and (max-width: 350px)
+                display: none
+        h3
+            margin: auto 2%
+            max-height: 65px
+            overflow: hidden
+            @media screen and (max-width: 350px)
+                width: 80%
+                margin-left: 27%
+    footer
+        min-height: 108px
+        .row
+            width: 100%
+        img
+            padding-top: 33px
+            padding-bottom: 33px
+        .container
+            width: 100%
+        span
+            width: 34px
+            height: 21px
+            background: url(../img/up.png) no-repeat 0 0
+            float: right
+            margin-top: 45px
+            margin-right: 34px
+
+@media screen and (max-width: 640px)
+    main
+        min-height: 450px
+        margin-bottom: 20px
+        .tab-none
+            display: none
+        .tab-view
+            display: block
+            img
+                min-height: 450px
