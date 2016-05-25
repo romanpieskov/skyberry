@@ -13,8 +13,10 @@
   overflow: auto;
   visibility: hidden;
   -webkit-overflow-scrolling: touch;
+  /*position: relative;*/
   /* enables momentum scrolling in iOS overflow elements */
 }
+
 .pushy a {
   display: block;
   color: #fff;

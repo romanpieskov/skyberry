@@ -1,10 +1,14 @@
 @import "vars"
 
+span > img
+    width: 100%
+    height: auto
+
 @media screen and (min-width: 769px)
     .xs-none
         display: block
     .sm-none
-        display: block
+        display: !important
     .md-none
         display: none
 @media screen and (max-width: 768px)
@@ -14,9 +18,10 @@
         display: none
     .md-none
         display: block
-    body
-        margin-bottom: 140px
+
     .logo
+        padding-left: 25px
+        padding-right: 10px
         a
             img
                 @media screen and (max-width: 500px)
@@ -28,11 +33,25 @@
         height: 20px
         float: right
         background: url(../img/mobileicon.png) no-repeat 0 0
-        margin: 14px 25px
+        margin: 14px 25px 14px 5%
+    .mob-search
+        display: none
+    .mob-form
+        display: block
+        padding: 0 20px
+        input
+            background: #aaa
+            color: black
+            border: none
+            outline: none
     .pushy
+        ul
+            padding-left: 5px
+        a
+            padding: 15px 25px
         p
             color: #fff
-            padding: 5%
+            padding: 15px 25px
         p.bold
             font-weight: 700
     .logo
@@ -50,6 +69,7 @@
             width: 60%
             line-height: 1.25em
             font-size: 1.25em
+            padding: 5%
             @media screen and (max-width: 500px)
                 line-height: 1em
                 font-size: 1em
@@ -81,6 +101,7 @@
             @media screen and (max-width: 350px)
                 width: 80%
                 margin-left: 27%
+
     footer
         min-height: 108px
         .row
@@ -90,21 +111,19 @@
             padding-bottom: 33px
         .container
             width: 100%
-        span
+        a
             width: 34px
             height: 21px
             background: url(../img/up.png) no-repeat 0 0
             float: right
             margin-top: 45px
-            margin-right: 34px
+            margin-right: 5%
 
 @media screen and (max-width: 640px)
     main
-        min-height: 450px
-        margin-bottom: 20px
+        // min-height: 450px
+        // margin-bottom: 20px
         .tab-none
             display: none
         .tab-view
             display: block
-            img
-                min-height: 450px
