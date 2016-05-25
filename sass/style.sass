@@ -2,16 +2,19 @@
 @import 'normalize'
 @import 'responsive_grid'
 @import 'common'
-@import 'style_menu'
-@import 'vars_menu'
+// @import 'style_menu'
+// @import 'vars_menu'
 // @import 'libs/contact-form/style'
 @import 'libs/bottomslider/slick'
 @import 'libs/bottomslider/slick-theme'
-@import "gallery"
-@import "libs/contact-form/formstyle"
+@import "_forms"
+// @import "gallery"
+// @import "libs/contact-form/formstyle"
 
 
 // шапка сайта
+header
+    margin-bottom: 1.5%
 .logo
     padding: 30px 10px
     .top-mnu
@@ -117,6 +120,7 @@ main
     margin: 0
     padding: 0
     @media screen and (max-width: 768px)
+        padding-left: 0
         width: 100%
         &:last-child
             margin-bottom: 20px

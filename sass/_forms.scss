@@ -1,0 +1,235 @@
+/* Стили модального окна */
+.modal-header h2 {
+    color: #fff;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    font-weight: normal;
+    line-height: 1;
+    margin: 0;
+}
+/* кнопка закрытия окна */
+// .modal .btn-close {
+//     color: #aaa;
+//     cursor: pointer;
+//     font-size: 30px;
+//     text-decoration: none;
+//     position: absolute;
+//     right: 5px;
+//     top: 0;
+// }
+// .modal .btn-close:hover {
+//     color: red;
+// }
+/* слой затемнения */
+.modal-wrap:before {
+    content: "";
+    display: none;
+    background: rgba(0, 0, 0, .7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 101;
+}
+.modal-overlay {
+    bottom: 0;
+    display: none;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 102;
+}
+/* активация слоя затемнения и модального блока */
+.modal-open:checked ~ .modal-wrap:before,
+.modal-open:checked ~ .modal-wrap .modal-overlay {
+    display: block;
+}
+.modal-open:checked ~ .modal-wrap .modal-dialog {
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    top: 20%;
+}
+/* элементы модального окна */
+.modal-dialog {
+    background: transparent;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    position: fixed;
+    width: 80%;
+    padding-left: 5%;
+    padding-right: 5%;
+    max-width: 500px;
+    left: 50%;
+    top: -100%;
+    // -webkit-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    // -moz-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    // box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    -webkit-transform: translate(-50%, -500%);
+    -ms-transform: translate(-50%, -500%);
+    -o-transform: translate(-50%, -500%);
+    transform: translate(-50%, -500%);
+    -webkit-transition: -webkit-transform 0.4s ease-out;
+    -moz-transition: -moz-transform 0.4s ease-out;
+    -o-transition: -o-transform 0.4s ease-out;
+    transition: transform 0.4s ease-out;
+    z-index: 103;
+}
+// .modal-body {
+//   padding: 20px;
+// }
+// .modal-body p {
+//     margin: 0;
+// }
+// .modal-header,
+// .modal-footer {
+//     padding: 20px 20px;
+// }
+// .modal-header {
+//     border-bottom: #eaeaea solid 1px;
+// }
+// .modal-header h2 {
+//     font-size: 20px;
+//     margin: 0;
+// }
+// .modal-footer {
+//     border-top: #eaeaea solid 1px;
+//     text-align: right;
+// }
+/* адаптивные картинки в модальном блоке */
+// .modal-body img {
+//     max-width: 100%;
+//     height: auto;
+// }
+/* кнопки */
+// .btn {
+//     background: #fff;
+//     border: #555 solid 1px;
+//     border-radius: 3px;
+//     cursor: pointer;
+//     display: inline-block;
+//     font-size: 14px;
+//     padding: 8px 15px;
+//     text-decoration: none;
+//     text-align: center;
+//     min-width: 60px;
+//     position: relative;
+// }
+// .btn:hover, .btn:focus {
+//     background: #f2f2f2;
+// }
+// .btn-primary {
+//     background: #428bca;
+//     border-color: #357ebd;
+//     color: #fff;
+// }
+// .btn-primary:hover{
+//     background: #66A1D3;
+// }
+
+.modal-dialog h2{
+    // Text style for "ЗАКАЗАТЬ ОБРАТ"
+        text-shadow: 0 0 4px black;
+        color: #fdfdfd;
+        font-family: PTSans;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 22px;
+}
+
+.modal-dialog p, .modal-dialog label{
+    text-shadow: 0 0 4px black;
+    color: #fdfdfd;
+    font-family: PTSans;
+    font-size: 14px;
+    font-weight: 400;
+    width: 65%;
+    text-align: justify;
+}
+.modal-dialog label{
+    text-align: center;
+    width: 100%;
+}
+
+.modal-dialog input[type="text"],.modal-dialog input[type="submit"],.modal-dialog input[type="textarea"]{
+    height: 42px;
+    background-color: #e3e3e3;
+    border-radius: 5px;
+    box-shadow: 0 0 4px black;
+    border: transparent;
+    width: 80%;
+    margin: 10px 0;
+    color: #000;
+    padding-left: 10px;
+    padding-right: 10px;
+    // box-shadow: none;
+}
+
+.modal-dialog input[type="submit"],.modal-dialog input[type="reset"]{
+    display: inline-block;
+    // margin-top: 8%;
+    width: 80%;
+    background: #0d344c;
+    color: #fdfdfd;
+    font-family: PTSans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    border: none;
+    // box-shadow: none;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    box-shadow: none;
+    border-right: 1px solid #4c697a;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.modal-dialog input[type="reset"]{
+    display: inline-block;
+    width: 20%;
+    height: 42px;
+    border: none;
+    // box-shadow: 0 0 4px black;
+    margin: 0;
+    right: 0;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
+    background: #0d344c url(../img/CLOSE.png) no-repeat 50% 50%;
+}
+
+.modal-dialog input[type="textarea"]{
+    height: 112px;
+}
+
+label{
+    text-align: center;
+    padding-left: 22%;
+}
+
+.modal-dialog .write, .modal-header .write{
+    text-align: center;
+    width: 85%;
+    margin-bottom: 5%;
+    // padding-left: 10%;
+}
+
+.control-panel{
+    margin-top: 8%;
+    width: 80%;
+    height: 40px;
+    background: #0d344c;
+    border: none;
+    box-shadow: 0 0 4px black;
+    // margin: 0;
+    border-radius: 5px;
+    position: relative;
+}
