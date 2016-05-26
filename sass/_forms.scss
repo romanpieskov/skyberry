@@ -7,6 +7,8 @@
     font-weight: normal;
     line-height: 1;
     margin: 0;
+    border-bottom: none;
+    width: 71%;
 }
 /* кнопка закрытия окна */
 // .modal .btn-close {
@@ -25,7 +27,7 @@
 .modal-wrap:before {
     content: "";
     display: none;
-    background: rgba(0, 0, 0, .7);
+    background: rgba(0, 0, 0, .85);
     position: fixed;
     top: 0;
     left: 0;
@@ -43,8 +45,8 @@
     z-index: 102;
 }
 /* активация слоя затемнения и модального блока */
-.modal-open:checked ~ .modal-wrap:before,
-.modal-open:checked ~ .modal-wrap .modal-overlay {
+.modal-open:checked ~ .modal-wrap .modal-overlay,
+.modal-open:checked ~ .modal-wrap:before {
     display: block;
 }
 .modal-open:checked ~ .modal-wrap .modal-dialog {
@@ -67,9 +69,6 @@
     max-width: 500px;
     left: 50%;
     top: -100%;
-    // -webkit-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
-    // -moz-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
-    // box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
     -webkit-transform: translate(-50%, -500%);
     -ms-transform: translate(-50%, -500%);
     -o-transform: translate(-50%, -500%);
@@ -80,69 +79,19 @@
     transition: transform 0.4s ease-out;
     z-index: 103;
 }
-// .modal-body {
-//   padding: 20px;
-// }
-// .modal-body p {
-//     margin: 0;
-// }
-// .modal-header,
-// .modal-footer {
-//     padding: 20px 20px;
-// }
-// .modal-header {
-//     border-bottom: #eaeaea solid 1px;
-// }
-// .modal-header h2 {
-//     font-size: 20px;
-//     margin: 0;
-// }
-// .modal-footer {
-//     border-top: #eaeaea solid 1px;
-//     text-align: right;
-// }
-/* адаптивные картинки в модальном блоке */
-// .modal-body img {
-//     max-width: 100%;
-//     height: auto;
-// }
-/* кнопки */
-// .btn {
-//     background: #fff;
-//     border: #555 solid 1px;
-//     border-radius: 3px;
-//     cursor: pointer;
-//     display: inline-block;
-//     font-size: 14px;
-//     padding: 8px 15px;
-//     text-decoration: none;
-//     text-align: center;
-//     min-width: 60px;
-//     position: relative;
-// }
-// .btn:hover, .btn:focus {
-//     background: #f2f2f2;
-// }
-// .btn-primary {
-//     background: #428bca;
-//     border-color: #357ebd;
-//     color: #fff;
-// }
-// .btn-primary:hover{
-//     background: #66A1D3;
-// }
 
-.modal-dialog h2{
+.modal-dialog h2 {
     // Text style for "ЗАКАЗАТЬ ОБРАТ"
-        text-shadow: 0 0 4px black;
-        color: #fdfdfd;
-        font-family: PTSans;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 22px;
+    text-shadow: 0 0 4px black;
+    color: #fdfdfd;
+    font-family: PTSans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    border-bottom: none;
 }
-
-.modal-dialog p, .modal-dialog label{
+.modal-dialog label,
+.modal-dialog p {
     text-shadow: 0 0 4px black;
     color: #fdfdfd;
     font-family: PTSans;
@@ -151,12 +100,13 @@
     width: 65%;
     text-align: justify;
 }
-.modal-dialog label{
+.modal-dialog label {
     text-align: center;
     width: 100%;
 }
-
-.modal-dialog input[type="text"],.modal-dialog input[type="submit"],.modal-dialog input[type="textarea"]{
+.modal-dialog input[type="submit"],
+.modal-dialog input[type="text"],
+.modal-dialog input[type="textarea"] {
     height: 42px;
     background-color: #e3e3e3;
     border-radius: 5px;
@@ -169,8 +119,8 @@
     padding-right: 10px;
     // box-shadow: none;
 }
-
-.modal-dialog input[type="submit"],.modal-dialog input[type="reset"]{
+.modal-dialog input[type="reset"],
+.modal-dialog input[type="submit"] {
     display: inline-block;
     // margin-top: 8%;
     width: 80%;
@@ -190,8 +140,7 @@
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
 }
-
-.modal-dialog input[type="reset"]{
+.modal-dialog input[type="reset"] {
     display: inline-block;
     width: 20%;
     height: 42px;
@@ -201,28 +150,25 @@
     right: 0;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
-    border-bottom-left-radius: 0px;
-    border-top-right-radius: 0px;
-    background: #0d344c url(../img/CLOSE.png) no-repeat 50% 50%;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    background: #0d344c url("../img/CLOSE.png") no-repeat 50% 50%;
 }
-
-.modal-dialog input[type="textarea"]{
+.modal-dialog input[type="textarea"] {
     height: 112px;
 }
-
-label{
+label {
     text-align: center;
     padding-left: 22%;
 }
-
-.modal-dialog .write, .modal-header .write{
+.modal-dialog .write,
+.modal-header .write {
     text-align: center;
     width: 85%;
     margin-bottom: 5%;
     // padding-left: 10%;
 }
-
-.control-panel{
+.control-panel {
     margin-top: 8%;
     width: 80%;
     height: 40px;
@@ -232,4 +178,33 @@ label{
     // margin: 0;
     border-radius: 5px;
     position: relative;
+}
+.btn {
+    padding-left: 5%;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    left: 51%;
+}
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: red;
+    width: 30px;
+    height: 37px;
+}
+.btn-callback::after {
+    background: url("../img/top-sprite.jpg") no-repeat 0 -1px;
+}
+.btn-write::after {
+    width: 30px;
+    height: 32px;
+    background: url("../img/top-sprite.jpg") no-repeat -30px 0;
+}
+.btn-search::after {
+    width: 30px;
+    height: 32px;
+    background: url("../img/top-sprite.jpg") no-repeat -60px 0;
 }

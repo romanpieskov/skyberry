@@ -1,0 +1,110 @@
+					<div id="Callback" class="Dialog">
+						<div class="modal-window">
+
+							<a href="[[~[[*id]]]]#close" title="Закрыть" class="close">X</a>
+							<span class="modal-callback"></span><h3> Обратный звонок </h3>
+							<p> Оставьте ваши данные заполнив форму и наш консультант свяжется с Вами в ближайшее время</p>
+					     <form action="#" method="post">
+                                
+                                    <input type="hidden" name="nospam:blank" value="" />
+					                <label>Ваше имя</label>
+					                <input name="name" class="form-control" value="" type="text" required>
+
+					                <label>Телефон</label>
+					                <input name="phone" class="form-control" value=""  type="text" required>
+
+					                <p class="conf">Ваши данные не будут переданы третьим лицам</p>
+
+					                <input class="form-control" value="Отправить" name="callback" type="submit">
+
+					              </form>
+						</div>
+					  </div>
+					  
+
+
+
+
+
+
+
+
+					<div id="Search" class="Dialog">
+						<div class="modal-window">
+
+							<a href="#close" title="Закрыть" class="close">X</a>
+							<span></span><h3> Поиск </h3>
+				            [[!SimpleSearchForm? &landing=`79` &tpl=`search`]]
+						</div>
+					  </div>
+					  
+					  
+
+
+
+
+
+
+
+
+
+					<div id="Write" class="Dialog">
+						<div class="modal-window">
+
+							<a href="[[~[[*id]]]]#close" title="Закрыть" class="close">X</a>
+							<span class="modal-write"></span><h3> Написать письмо </h3>
+							<p> Оставьте ваши данные заполнив форму и мы получим ваше письмо</p>
+						 <form action="#" method="post">
+                                    <input type="hidden" name="nospam:blank" value="" />
+									<label>Ваше имя</label>
+									<input name="name" class="form-control" value="" type="text" required>
+
+									<label>Ваше сообщение</label>
+									<input name="message" class="form-control" value="" type="textarea" required>
+
+									<p class="conf">Ваши данные не будут переданы третьим лицам</p>
+
+									<input class="form-control" value="Отправить" name="write" type="submit">
+
+								  </form>
+						</div>
+					  </div>
+					  
+
+
+
+
+
+					<div id="Zakaz" class="Dialog">
+						<div class="modal-window">
+
+							<a href="[[~[[*id]]]]#close" title="Закрыть" class="close">X</a>
+							<span class="callback"></span><h3> Заказ</h3>
+							<p> Оставьте ваши данные заполнив форму и наш консультант свяжется с Вами в ближайшее время</p>
+					     <form action="#" method="post">
+                                
+                                    <input type="hidden" name="nospam:blank" value="" />
+                                    <input type="hidden" name="page" value="[[++site_url]][[~[[*id]]]]">
+					                <label>Ваше имя</label>
+					                <input name="name" class="form-control" value=""  type="text" required>
+
+					                <label>Телефон</label>
+					                <input name="phone" class="form-control" value=""  type="text" required>
+					                
+					                <label>Сообщение</label>
+					                <input name="message" class="form-control" value="" type="textarea">
+
+					                <p class="conf">Ваши данные не будут переданы третьим лицам</p>
+
+					                <input class="form-control" value="Отправить" name="zakaz" type="submit">
+
+					              </form>
+						</div>
+					  </div>
+					  
+					  
+					  
+					  
+					  
+					  
+					  
