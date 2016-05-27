@@ -2,10 +2,11 @@
 $(document).ready(function(){
 
 $('.slider').slick({
-    autoplay: false,
+    autoplay: true,
     dots: false,
     slidesToShow: 1,
-    responsive: true
+    responsive: true,
+    autoplaySpeed: 4000
   });
 
 $('.responsive').slick({

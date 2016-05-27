@@ -8,21 +8,21 @@
     line-height: 1;
     margin: 0;
     border-bottom: none;
-    width: 71%;
+    // width: 71%;
 }
 /* кнопка закрытия окна */
-// .modal .btn-close {
-//     color: #aaa;
-//     cursor: pointer;
-//     font-size: 30px;
-//     text-decoration: none;
-//     position: absolute;
-//     right: 5px;
-//     top: 0;
-// }
-// .modal .btn-close:hover {
-//     color: red;
-// }
+.modal .btn-close {
+    color: #aaa;
+    cursor: pointer;
+    font-size: 30px;
+    text-decoration: none;
+    position: absolute;
+    right: 5px;
+    top: 0;
+}
+.modal .btn-close:hover {
+    color: red;
+}
 /* слой затемнения */
 .modal-wrap:before {
     content: "";
@@ -54,7 +54,7 @@
     -ms-transform: translate(-50%, 0);
     -o-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
-    top: 20%;
+    top: 10%;
 }
 /* элементы модального окна */
 .modal-dialog {
@@ -63,9 +63,9 @@
     border: none;
     border-radius: 5px;
     position: fixed;
-    width: 80%;
-    padding-left: 5%;
-    padding-right: 5%;
+    // width: 80%;
+    // padding-left: 5%;
+    // padding-right: 5%;
     max-width: 500px;
     left: 50%;
     top: -100%;
@@ -84,11 +84,12 @@
     // Text style for "ЗАКАЗАТЬ ОБРАТ"
     text-shadow: 0 0 4px black;
     color: #fdfdfd;
-    font-family: PTSans;
+    font-family: 'PT Sans', sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 22px;
     border-bottom: none;
+    text-align: center;
 }
 .modal-dialog label,
 .modal-dialog p {
@@ -97,33 +98,37 @@
     font-family: PTSans;
     font-size: 14px;
     font-weight: 400;
-    width: 65%;
-    text-align: justify;
-}
-.modal-dialog label {
+    // width: 65%;
+    // text-align: justify;
+    margin: 0;
+    padding: 0 auto;
     text-align: center;
-    width: 100%;
+    font-family: 'PT Sans', sans-serif;
 }
+// .modal-dialog label {
+//     text-align: center;
+//     width: 100%;
+// }
 .modal-dialog input[type="submit"],
 .modal-dialog input[type="text"],
 .modal-dialog input[type="textarea"] {
     height: 42px;
     background-color: #e3e3e3;
     border-radius: 5px;
-    box-shadow: 0 0 4px black;
     border: transparent;
-    width: 80%;
+    width: 100%;
     margin: 10px 0;
     color: #000;
     padding-left: 10px;
     padding-right: 10px;
-    // box-shadow: none;
+    box-shadow: 0 0 4px black;
+    font-family: 'PT Sans', sans-serif;
 }
-.modal-dialog input[type="reset"],
+
 .modal-dialog input[type="submit"] {
     display: inline-block;
-    // margin-top: 8%;
-    width: 80%;
+    margin-top: 5%;
+    // width: 80%;
     background: #0d344c;
     color: #fdfdfd;
     font-family: PTSans;
@@ -132,45 +137,34 @@
     line-height: 22px;
     border: none;
     // box-shadow: none;
-    margin: 0;
-    position: absolute;
+    // margin: 0;
+    // position: absolute;
     top: 0;
-    box-shadow: none;
-    border-right: 1px solid #4c697a;
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
+    box-shadow: 0 0 4px black;
+    font-family: 'PT Sans', sans-serif;
+    // box-shadow: none;/
+    // border-right: 1px solid #4c697a;
+    // border-bottom-right-radius: 0;
+    // border-top-right-radius: 0;
 }
-.modal-dialog input[type="reset"] {
-    display: inline-block;
-    width: 20%;
-    height: 42px;
-    border: none;
-    // box-shadow: 0 0 4px black;
-    margin: 0;
-    right: 0;
-    border-bottom-right-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-left-radius: 0;
-    border-top-right-radius: 0;
-    background: #0d344c url("../img/CLOSE.png") no-repeat 50% 50%;
-}
+
 .modal-dialog input[type="textarea"] {
     height: 112px;
 }
-label {
-    text-align: center;
-    padding-left: 22%;
-}
+// label {
+//     text-align: center;
+//     padding-left: 22%;
+// }
 .modal-dialog .write,
 .modal-header .write {
     text-align: center;
-    width: 85%;
-    margin-bottom: 5%;
+    // width: 85%;
+    margin-bottom: 2%;
     // padding-left: 10%;
 }
 .control-panel {
     margin-top: 8%;
-    width: 80%;
+    // width: 80%;
     height: 40px;
     background: #0d344c;
     border: none;
@@ -195,16 +189,27 @@ label {
     width: 30px;
     height: 37px;
 }
-.btn-callback::after {
-    background: url("../img/top-sprite.jpg") no-repeat 0 -1px;
-}
+// .btn-callback::after {
+//     background: url("../img/phone_mobile.svg") no-repeat 0 0;
+// }
 .btn-write::after {
-    width: 30px;
-    height: 32px;
-    background: url("../img/top-sprite.jpg") no-repeat -30px 0;
+    width: 25px;
+    height: 25px;
+    background: url("../img/message.svg") no-repeat 0 0;
+    background-size: 25px 25px;
 }
 .btn-search::after {
-    width: 30px;
-    height: 32px;
-    background: url("../img/top-sprite.jpg") no-repeat -60px 0;
+    margin-top: 1px;
+    width: 21px;
+    height: 21px;
+    background: url("../img/seach.svg") no-repeat 0 0;
+    background-size: 21px 21px;
 }
+
+// .modal-dialog label.btn-close{
+//     background: #0d344c url("../img/CLOSE.png") no-repeat 50% 50%;
+//     width: 20%;
+//     height: 105%;
+//     position: absolute;
+//     right: 0;
+// }

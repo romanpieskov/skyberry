@@ -32,8 +32,14 @@ header
     a
         img
             float: left
-
-
+            width: 250px
+    .btn-callback::after
+        width: 25px
+        height: 25px
+        background: url("../img/phone.svg") no-repeat 0 0
+        background-size: 25px 25px
+        @media screen and (max-width: 768px)
+            background: url("../img/phone_mobile.svg") no-repeat 0 0
 // шапка сайта
 
 // меню сайта
@@ -45,6 +51,7 @@ main
     // max-height: 395px
 .slider
     margin-top: 0px
+    margin-bottom: 20px
     // z-index: -1
     img
         backgroud-size: cover
@@ -82,6 +89,8 @@ main
             padding-left: 0
             font-size: 1.5em
             line-height: 1em
+            margin-right: -10px
+            margin-left: -10px
         a
             width: 100%
             font-size: 1em
@@ -94,6 +103,7 @@ main
             height: 100%
             @media screen and (max-width: 768px)
                 color: #6f6f6f
+                padding-left: 8%
     li > a
         &:hover
             background: linear-gradient(to left,#184d71 60%,#0e364e)
@@ -112,16 +122,17 @@ main
     padding: 0 25px
     color: #fff
     background: $blue
-    min-height: 74px
+    min-height: 64px
     vertical-align: center
     margin: 0
     margin-bottom: 2%
     span
-        display: inline-block
-        width: 38px
+        display: block
+        width: 25px
         height: 25px
-        background: url(../img/arrowdown.png) no-repeat 0 0
-        margin-top: 23px
+        background-size: 25px 25px
+        background: url(../img/arrowdown.svg) no-repeat 0 0
+        margin-top: 25px
         // margin-left: 40px
         float: right
         margin-right: 3%
@@ -180,7 +191,7 @@ main
     // нужна будет адаптация под разные экраны
 // новости и статьи
 .news
-    margin-top: 30px
+    margin-top: 20px
 .news>div
     p
         padding-top: 0
@@ -194,6 +205,7 @@ main
         display: block
         padding: 10px
         padding-top: 0
+        margin-bottom: 10px
     .info
         overflow-y: hidden
     a
@@ -202,11 +214,12 @@ main
         &:hover
             color: black
     hr
-        margin: 10px 0px 30px 0px
+        margin: 10px 0px 26px 0px
         &:after
             content: ""
             display: block
             border-top: 1px solid #b2b2b2
+            margin-bottom: 26px
     .bigitem
         width: 100%
         height: auto
@@ -225,6 +238,10 @@ main
         padding-top: 0
     &:focus
         outline: none
+    .slick-prev
+        margin-left: 10px
+    .slick-next
+        margin-right: 10px
 // новости и статьи
 // клиенты и партнеры
 .clients
@@ -235,6 +252,8 @@ main
         text-align: justify
         font-size: 15px
         margin: 20px 0px 50px 0px
+    h2
+        margin-top: 1%
 .responsive
     .slick-list
         margin: 0 50px
@@ -243,11 +262,11 @@ main
 // клиенты и партнеры
 footer
     width: 100%
-    position: absolute
-    bottom: 0
+    // position: absolute
+    // bottom: 0
     text-align: center
-    max-height: 160px
-    margin-top: 10px
+    // max-height: 180px
+    margin-top: 20px
     border-top: 5px solid $grey
     background: $blue
     *
@@ -261,14 +280,20 @@ footer
         padding-top: 10px
         .adress
             width: 20%
-            margin-left: 5%
+            margin-left: 29%
             text-align:left
             @media screen and (max-width: 992px)
                 margin-left: 0
         p
-            width: 28%
+            width: 17%
             vertical-align: middle
             text-align: right
+            @media screen and (max-width: 992px)
+                width: 20%
+        img
+            width: 135px
+            padding: 0
+            margin-top: 20px
 .footer
     text-align: left
     & p:first-child
@@ -280,7 +305,8 @@ footer
     & p:last-child
         float: right
         width: 21%
-
+    .social
+        text-align: center
     .social-box1
         margin: 0 10px
         width: 35px
@@ -320,9 +346,15 @@ footer
         text-align: center
         margin: 0 auto
 #zoom
+    max-width: 420px
+    @media screen and (max-width: 992px)
+        max-width: 320px
+    @media screen and (max-width: 768px)
+        max-width: 80%
+        margin-left: 15%
     @media screen and (max-width: 500px)
         max-width: 80%
-        margin-left: 5%
+        margin-left: 10%
 
 .zoomLens
     max-height: 200px
@@ -355,6 +387,9 @@ footer
         font-size: 1.15em
         &:hover
             background: lighten($blue, 10)
+            color: #fff
+    label
+        @extend a
 .pagination
     margin: 2% auto
     width: 100%
@@ -448,11 +483,18 @@ hr
     padding-left: 10px
     padding-right: 10px
 
-@import "responsive.sass"
-
+// модальные окна
+.modal-dialog
+    width: 300px
+    @media screen and (max-width: 768px)
+        top: 5%
+        width: 100%
+        padding-left: 15px
+        padding-right: 15px
 .btn
+    left: 60%
     @media screen and (max-width: 992px)
-        left: 40%
+        left: 53%
     @media screen and (max-width: 768px)
         position: absolute
         top: 12px
@@ -460,8 +502,54 @@ hr
     @media screen and (max-width: 550px)
         left: 72%
     @media screen and (max-width: 460px)
-        left: 68%
+        left: 72%
     @media screen and (max-width: 380px)
-        left: 63%
+        left: 68%
     @media screen and (max-width: 320px)
-        left: 60%
+        left: 65%
+
+.search-header
+    margin: 0
+@import "responsive.sass"
+
+// страница поиска
+.sisea-result
+    h3
+        font-size: 22px
+        line-height: 22px
+        text-decoration: underline
+        font-weight: 700
+        margin-bottom: 0px
+    a
+        @extend h3
+    p
+        margin-top: 0px
+.sisea-result-pages
+    margin-right: 18px
+.sisea-page
+    margin: 0 7px
+.sisea-current-page
+    font-weight: 700
+.sisea-results
+    font-size: 18px
+    line-height: 18px
+.sisea-highlight
+    @extend .sisea-results
+    font-weight: 700
+
+div img
+    background-size: cover
+    width: 100%
+    height: auto
+span img
+    background-size: cover
+    width: 100%
+    height: auto
+span strong img
+    background-size: cover
+    width: 100%
+    height: auto
+strong img
+    background-size: cover
+    width: 100%
+    height: auto

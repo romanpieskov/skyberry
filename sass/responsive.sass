@@ -28,12 +28,13 @@ span > img
                     width: 50%
                     height: auto
                     margin-top: 3%
+
     .menu-btn
         width: 31px
         height: 20px
         float: right
-        background: url(../img/mobileicon.png) no-repeat 0 0
-        margin: -5px 5.5% 0 0
+        background: url(../img/menu.svg) no-repeat 0 0
+        margin: 14px 5.5% 0 0
     .mob-search
         display: none
     .mob-form
@@ -77,9 +78,13 @@ span > img
                 line-height: 1.3em
                 font-size: 0.8em
                 width: 62%
+        h2
+            margin-bottom: 0
     .news-item
         max-height: 160px
         min-width: 115px
+    .slick-prew
+        left: 2%
         @media screen and (max-width: 350px)
             margin-bottom: 10px
         .slick-next
@@ -95,12 +100,13 @@ span > img
             @media screen and (max-width: 350px)
                 display: none
         h3
-            margin: auto 2%
-            max-height: 65px
+            margin: 3%
+            max-height: 64px
             overflow: hidden
             @media screen and (max-width: 350px)
                 width: 80%
-                margin-left: 27%
+                margin-left: 20%
+
 
     footer
         min-height: 108px
@@ -114,14 +120,24 @@ span > img
         a
             width: 34px
             height: 21px
-            background: url(../img/up.png) no-repeat 0 0
+            background: url(../img/up.svg) no-repeat 0 0
             float: right
-            margin-top: 45px
+            margin-top: 24px
             margin-right: 5%
 
 @media screen and (max-width: 640px)
+    .slider
+        .slick-arrow
+            visibility: hidden
     main
         .tab-none
             display: none
         .tab-view
             display: block
+
+@media screen and (max-width: 400px)
+    .news > div img
+        width: 35%
+    .news h3
+        max-height: 63px
+        overflow: hidden
