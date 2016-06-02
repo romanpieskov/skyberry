@@ -2,13 +2,13 @@
 // размеры и позиционирование
 $heightMenu: 40px; // размер меню
 $posMenu: center; // позиция основного меню
-$widthMenu: 105px; // ширина основного меню
+$widthMenu: 125px; // ширина основного меню
 $widthSubMenu: 160px; // ширина подменю
 
 
 
 // цвета меню
-$baseColorMenu: #0e364e;
+$baseColorMenu: #7d3d29;
 $colorMenu: white; // цвет текста
 $colorHoverMenu: lighten($baseColorMenu,10%); // при наведении цвет основного меню
 $colorBcgSubMenu: #f6f6f6; // бакграунд подменю

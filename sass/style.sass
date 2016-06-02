@@ -15,8 +15,9 @@
 // шапка сайта
 header
     // margin-bottom: 1.5%
+    background: #f6ecd3
 .logo
-    padding: 30px 10px
+    padding: 20px 10px
     .top-mnu
         float: right
         display: inline-block
@@ -153,14 +154,18 @@ main
         background-size: cover
         width: 100%
         height: auto
+        max-width: 220px
+        min-height: 220px
+        max-height: 220px
         position: relative
         filter: brightness(95%)
     .info-work
         position: absolute
-        top: 65%
-        left: 7%
-        color: $white
-        width: 65%
+        top: 100%
+        text-align: center
+        left: 20%
+        color: #000
+        width: 59%
         font-size: $headers
         font-weight: 400
     span
@@ -190,8 +195,6 @@ main
             max-height: 400px
     // нужна будет адаптация под разные экраны
 // новости и статьи
-.news
-    // margin-top: 20px
 .news>div
     p
         padding-top: 0
@@ -209,6 +212,7 @@ main
         display: block
         padding: 10px
         padding-top: 0
+        margin-right: 1%
         margin-bottom: 10px
     .info
         overflow-y: hidden
@@ -265,7 +269,7 @@ main
     p
         text-align: justify
         font-size: 15px
-        margin: 20px 0px 50px 0px
+        margin: 20px 0px 15px 0px
     h2
         margin-top: 1%
 .responsive
@@ -276,15 +280,12 @@ main
 // клиенты и партнеры
 footer
     width: 100%
-    // position: absolute
-    // bottom: 0
     text-align: center
-    // max-height: 180px
     margin-top: 15px
-    border-top: 5px solid $grey
-    background: $blue
+    border-top: 8px solid #742f1c
+    background: #f6ecd3
     *
-        color: $white
+        color: #7d3c28
         display: inline-block
         img
             margin-top: 10px
@@ -294,7 +295,7 @@ footer
         padding-top: 10px
         .adress
             width: 20%
-            margin-left: 29%
+            margin-left: 47%
             text-align:left
             @media screen and (max-width: 992px)
                 margin-left: 0
@@ -308,6 +309,8 @@ footer
             width: 135px
             padding: 0
             margin-top: 20px
+    a
+        color: #000
 .footer
     text-align: left
     & p:first-child
@@ -556,7 +559,7 @@ hr
 .content-page
     margin-top: 1.5%
 .news-home
-    margin-top: 20px
+    margin-top: 75px
 
 img
     background-size: cover
