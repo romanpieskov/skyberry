@@ -107,13 +107,13 @@ main
                 padding-left: 8%
     li > a
         &:hover
-            background: linear-gradient(to left,#184d71 60%,#0e364e)
+            background: linear-gradient(to left,#7d3d29 60%,#7d3d29)
             color: $white
         &:hover::after
             display: block
     .active
         a
-            background: linear-gradient(to left,#184d71 60%,#0e364e)
+            background: linear-gradient(to left,#7d3d29 60%,#7d3d29)
             color: $white
 // моб версия
 .btn-category
@@ -311,6 +311,7 @@ footer
             margin-top: 20px
     a
         color: #000
+        margin-top: 20px
 .footer
     text-align: left
     & p:first-child
@@ -330,7 +331,7 @@ footer
         height: 35px
         background: url(../img/sprite-item.png) no-repeat 0% 0%
         &:hover
-            background-color: darken($blue, 10%)
+            background-color: lighten(#f6ecd3, 10%)
             border-radius: 6px
     .social-box2
         @extend .social-box1
@@ -396,14 +397,16 @@ footer
     margin-top: 7%
     a
         display: block
-        background: $blue
+        background: #7d3d29
         margin: 1.5% 0
         text-align: center
+        // font-weight: 700
+        // line-height: 30px
         padding: 5%
         color: #fff
         font-size: 1.15em
         &:hover
-            background: lighten($blue, 10)
+            background: lighten(#7d3d29, 10)
             color: #fff
     label
         @extend a
@@ -516,7 +519,7 @@ hr
         left: 53%
     @media screen and (max-width: 768px)
         position: absolute
-        top: 12px
+        top: 22px
         left: 76%
     @media screen and (max-width: 550px)
         left: 72%
@@ -560,6 +563,8 @@ hr
     margin-top: 1.5%
 .news-home
     margin-top: 75px
+    @media screen and (max-width: 768px)
+        margin-top: 0
 
 img
     background-size: cover

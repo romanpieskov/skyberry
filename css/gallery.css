@@ -1,0 +1,14 @@
+.filter {
+  margin-top: 2%;
+}
+
+.ajax-filter-count {
+  font-weight: bold;
+}
+
+.ajax-filter-count a {
+  font-size: 20px;
+  display: block;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
