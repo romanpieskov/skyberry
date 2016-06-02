@@ -15,7 +15,7 @@
 // шапка сайта
 header
     // margin-bottom: 1.5%
-    background: #f6ecd3
+    background: $HeaderBcgColor
 .logo
     padding: 20px 10px
     .top-mnu
@@ -107,13 +107,13 @@ main
                 padding-left: 8%
     li > a
         &:hover
-            background: linear-gradient(to left,#7d3d29 60%,#7d3d29)
+            background: linear-gradient(to left,$baseColor 60%,$baseColor)
             color: $white
         &:hover::after
             display: block
     .active
         a
-            background: linear-gradient(to left,#7d3d29 60%,#7d3d29)
+            background: linear-gradient(to left,$baseColor 60%,$baseColor)
             color: $white
 // моб версия
 .btn-category
@@ -154,45 +154,42 @@ main
         background-size: cover
         width: 100%
         height: auto
-        max-width: 220px
-        min-height: 220px
-        max-height: 220px
         position: relative
-        filter: brightness(95%)
+        filter: brightness(100%)
     .info-work
         position: absolute
-        top: 100%
-        text-align: center
+        top: 75%
         left: 20%
+        text-align: center
         color: #000
-        width: 59%
+        width: 60%
         font-size: $headers
         font-weight: 400
-    span
-        margin-top: 28px
-        display: inline-block
-        width: 100%
-        text-align: center
-        color: $blue
-        font-size: $headers
-        font-weight: bold
-        font-family: Open Sans, sans-serif
-        letter-spacing: 0.5px
-        line-height: 22px
-    button
-        @extend span
-        padding: 6px 0px
-        margin: 15px 0px 35px 0px
-        text-transform: uppercase
-        color: $white
-        background: $blue
-        border: none
-        border-bottom: 5px solid $grey
-        &:hover
-            background: lighten($blue, 5%)
-    .callback
-        div
-            max-height: 400px
+    // span
+    //     margin-top: 28px
+    //     display: inline-block
+    //     width: 100%
+    //     text-align: center
+    //     color: $blue
+    //     font-size: $headers
+    //     font-weight: bold
+    //     font-family: Open Sans, sans-serif
+    //     letter-spacing: 0.5px
+    //     line-height: 22px
+    // button
+    //     @extend span
+    //     padding: 6px 0px
+    //     margin: 15px 0px 35px 0px
+    //     text-transform: uppercase
+    //     color: $white
+    //     background: $blue
+    //     border: none
+    //     border-bottom: 5px solid $grey
+    //     &:hover
+    //         background: lighten($blue, 5%)
+    // .callback
+    //     div
+    //         max-height: 400px
     // нужна будет адаптация под разные экраны
 // новости и статьи
 .news>div
@@ -284,7 +281,7 @@ footer
     text-align: center
     margin-top: 15px
     border-top: 8px solid #742f1c
-    background: #f6ecd3
+    background: $FooterBcgColor
     *
         color: #7d3c28
         display: inline-block
@@ -398,7 +395,7 @@ footer
     margin-top: 7%
     a
         display: block
-        background: #7d3d29
+        background: $baseColor
         margin: 1.5% 0
         text-align: center
         // font-weight: 700
@@ -407,7 +404,7 @@ footer
         color: #fff
         font-size: 1.15em
         &:hover
-            background: lighten(#7d3d29, 10)
+            background: lighten($baseColor, 10)
             color: #fff
     label
         @extend a
@@ -563,7 +560,7 @@ hr
 .content-page
     margin-top: 1.5%
 .news-home
-    margin-top: 75px
+    margin-top: 20px
     @media screen and (max-width: 768px)
         margin-top: 0
 
