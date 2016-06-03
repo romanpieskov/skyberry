@@ -5,17 +5,18 @@ $('.slider').slick({
     autoplay: true,
     dots: false,
     slidesToShow: 1,
-    responsive: true,
+    responsive: false,
     autoplaySpeed: 4000
   });
 
 $('.responsive').slick({
   dots: false,
-  infinite: true,
+  // infinite: true,
   speed: 300,
-  slidesToShow: 2,
+  slidesToShow: 4,
   centerMode: true,
-  variableWidth: true
+  variableWidth: true,
+  responsive: false
 });
 
 
@@ -23,7 +24,7 @@ $('.news-item').slick({
     autoplay: false,
     dots: false,
     slidesToShow: 1,
-    responsive: true
+    responsive: false
   });
 
 $('#up').click(function() {
