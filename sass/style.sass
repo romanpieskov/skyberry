@@ -34,12 +34,62 @@ header
             float: left
             width: 250px
     .btn-callback::after
-        width: 25px
-        height: 25px
+        width: 32px
+        height: 32px
         background: url("../img/phone.svg") no-repeat 0 0
-        background-size: 25px 25px
+        background-size: 32px 32px
         @media screen and (max-width: 768px)
             background: url("../img/phone_mobile.svg") no-repeat 0 0
+    .btn-callback::before
+        position: absolute
+        left: -25px
+        top: 35px
+        content: attr(data-tooltip)
+        width: 100px
+        height: 25px
+        background: #bababa
+        display: block
+        color: #fff
+        line-height: 25px
+        text-align: center
+        display: none
+    .btn-callback:hover
+        &::before
+            display: block
+    .btn-write
+        &::before
+            position: absolute
+            left: -25px
+            top: 35px
+            content: attr(data-tooltip)
+            width: 100px
+            height: 25px
+            background: #bababa
+            display: block
+            color: #fff
+            line-height: 25px
+            text-align: center
+            display: none
+        &:hover
+            &::before
+                display: block
+    .btn-search
+        &::before
+            position: absolute
+            top: 35px
+            left: -25px
+            content: attr(data-tooltip)
+            width: 100px
+            height: 25px
+            background: #bababa
+            display: block
+            color: #fff
+            line-height: 25px
+            text-align: center
+            display: none
+        &:hover
+            &::before
+                display: block
 // шапка сайта
 
 // меню сайта
@@ -106,13 +156,13 @@ main
                 padding-left: 8%
     li > a
         &:hover
-            background: linear-gradient(to left,#184d71 60%,#0e364e)
+            background: linear-gradient(to left,$baseColor 60%,$baseColor)
             color: $white
         &:hover::after
             display: block
     .active
         a
-            background: linear-gradient(to left,#184d71 60%,#0e364e)
+            background: linear-gradient(to left,$baseColor 60%,$baseColor)
             color: $white
 // моб версия
 .btn-category
@@ -121,7 +171,7 @@ main
     font-weight: 700
     padding: 0 25px
     color: #fff
-    background: $blue
+    background: $baseColor
     min-height: 64px
     vertical-align: center
     margin: 0
@@ -154,21 +204,22 @@ main
         width: 100%
         height: auto
         position: relative
-        filter: brightness(95%)
+        filter: brightness(100%)
     .info-work
         position: absolute
-        top: 65%
-        left: 7%
-        color: $white
-        width: 65%
+        top: 70%
+        left: 25%
+        color: #000
+        width: 47%
         font-size: $headers
+        text-align: center
         font-weight: 400
     span
         margin-top: 28px
         display: inline-block
         width: 100%
         text-align: center
-        color: $blue
+        color: $baseColor
         font-size: $headers
         font-weight: bold
         font-family: Open Sans, sans-serif
@@ -180,11 +231,11 @@ main
         margin: 15px 0px 35px 0px
         text-transform: uppercase
         color: $white
-        background: $blue
+        background: $baseColor
         border: none
         border-bottom: 5px solid $grey
         &:hover
-            background: lighten($blue, 5%)
+            background: lighten($baseColor, 5%)
     .callback
         div
             max-height: 400px
@@ -280,10 +331,10 @@ footer
     text-align: center
     // max-height: 180px
     margin-top: 15px
-    border-top: 5px solid $grey
-    background: $blue
+    border-top: 5px solid $baseColor
+    background: $FooterBcgColor
     *
-        color: $white
+        color: $baseColor
         display: inline-block
         img
             margin-top: 10px
@@ -293,7 +344,7 @@ footer
         padding-top: 10px
         .adress
             width: 20%
-            margin-left: 29%
+            margin-left: 46%
             text-align:left
             @media screen and (max-width: 992px)
                 margin-left: 0
@@ -326,7 +377,7 @@ footer
         height: 35px
         background: url(../img/sprite-item.png) no-repeat 0% 0%
         &:hover
-            background-color: darken($blue, 10%)
+            background-color: darken($baseColor, 10%)
             border-radius: 6px
     .social-box2
         @extend .social-box1
@@ -392,14 +443,14 @@ footer
     margin-top: 7%
     a
         display: block
-        background: $blue
+        background: $baseColor
         margin: 1.5% 0
         text-align: center
         padding: 5%
         color: #fff
         font-size: 1.15em
         &:hover
-            background: lighten($blue, 10)
+            background: lighten($baseColor, 10)
             color: #fff
     label
         @extend a
@@ -567,24 +618,24 @@ img
     img
         width: 100%
 
-
-// div img
-//     background-size: cover
-//     width: 100%
-//     height: auto
-// span img
-//     background-size: cover
-//     width: 100%
-//     height: auto
-// span strong img
-//     background-size: cover
-//     width: 100%
-//     height: auto
-// strong img
-//     background-size: cover
-//     width: 100%
-//     height: auto
-
-// .justifyfull
-//     width: auto
-//     height: auto
+// стили для админки modx для форматирования текста
+.justifyright
+    text-align: right
+    a
+        color: #7d3d29
+.justifyfull
+    text-align: justify
+    color: #000
+    a
+        color: #7d3d29
+.justifyleft
+    text-align: left
+    a
+        color: #7d3d29
+em
+    color: #7d3d29
+h1
+    margin: 0
+    padding: 0
+    color: #7d3d29
+    font-size: 22px

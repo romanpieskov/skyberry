@@ -129,7 +129,7 @@
     display: inline-block;
     margin-top: 5%;
     // width: 80%;
-    background: #0d344c;
+    background: #7d3d29;
     color: #fdfdfd;
     font-family: PTSans;
     font-size: 18px;
@@ -193,6 +193,7 @@
 //     background: url("../img/phone_mobile.svg") no-repeat 0 0;
 // }
 .btn-write::after {
+    margin-top: 4px;
     width: 25px;
     height: 25px;
     background: url("../img/message.svg") no-repeat 0 0;
@@ -200,10 +201,10 @@
 }
 .btn-search::after {
     margin-top: 1px;
-    width: 21px;
-    height: 21px;
+    width: 27px;
+    height: 27px;
     background: url("../img/seach.svg") no-repeat 0 0;
-    background-size: 21px 21px;
+    background-size: 27px 27px;
 }
 
 // .modal-dialog label.btn-close{
