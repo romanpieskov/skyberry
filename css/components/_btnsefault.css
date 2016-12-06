@@ -1,0 +1,13 @@
+.btndefault {
+  background: #7d3d29;
+  color: #fff;
+  height: 40px;
+  line-height: 0px;
+  display: inline-block;
+  font-size: 1.15em;
+  font-weight: bold;
+}
+
+.btndefault:hover {
+  background-color: #a35036;
+}
