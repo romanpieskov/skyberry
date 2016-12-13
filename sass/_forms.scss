@@ -131,14 +131,17 @@
 
 .modal-dialog input[type="submit"],
 .modal-dialog input[type="text"],
+.modal-dialog input[type="email"],
 .modal-dialog input[type="textarea"],
-.modal-dialog input[type="number"] {
-    height: 42px;
+.modal-dialog label,
+.modal-dialog input[type="number"],
+.modal-dialog select, textarea {
+    height: 38px;
     // background-color: #e3e3e3;
     border-radius: 5px;
     border: 1px solid #c1c1c1;
     width: 100%;
-    margin: 10px 0;
+    margin: 3px 0;
     color: #000;
     padding-left: 10px;
     padding-right: 10px;
@@ -146,9 +149,61 @@
     font-family: 'PT Sans', sans-serif;
         opacity: 0.85;
 }
-.modal-dialog input[type="submit"]{
-    background: transparent!important;
+
+// Убрать стрелочки в браузерах хром, опера, мозилла
+.without-arrow>input[type='number'] {
+    -moz-appearance: textfield;
 }
+
+.without-arrow>input::-webkit-outer-spin-button,
+.without-arrow>input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+
+.modal-dialog textarea {
+    height: 80px;
+}
+
+.modal-dialog .button-send input[type="submit"]{
+    width: 100%;
+    font-size: 1.15em;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    background-color: #7d3d29;
+    opacity: 1;
+}
+
+.button-send input[type="submit"]:hover{
+  background-color: #a35036;
+}
+
+.buttons-center{
+    width: 181px;
+    margin: 0px auto;
+    overflow: hidden;
+}
+
+.button-send{
+    width: 102px;
+    margin: 10px auto;
+    float: left;
+}
+
+@media screen and (min-width: 768px){
+    .button-send {
+        float: none;
+    }
+}
+
+.button-close{
+    float: left;
+    margin: 23px 0px 0px 15px;
+}
+
 select{
     width: 100%;
     border-radius: 5px;
